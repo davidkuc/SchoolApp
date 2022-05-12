@@ -20,9 +20,17 @@ namespace SchoolApp.Views.Pages
     /// </summary>
     public partial class LoginPage : Page
     {
-        public LoginPage()
+        private readonly MainWindow _mainWindow;
+
+        public LoginPage(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
+        }
+
+        private void Login_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.Content = new MainMenuPage(_mainWindow);
         }
     }
 }

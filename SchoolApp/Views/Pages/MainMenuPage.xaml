@@ -21,6 +21,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
+            <Border BorderBrush="DarkGray" BorderThickness="3"></Border>
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.5*"></RowDefinition>
@@ -42,17 +43,17 @@
                 </Grid>
 
                 <Grid Grid.Row="2">
-                    <Button Width="100" Height="50">Teachers</Button>
+                    <Button Name="Teachers_Nav_Button" Click="Teachers_Nav_Button_Click" Width="100" Height="50">Teachers</Button>
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <Button Width="100" Height="50">Accounts</Button>
+                    <Button Name="Accounts_Nav_Button" Click="Accounts_Nav_Button_Click" Width="100" Height="50">Accounts</Button>
                 </Grid>
 
             </Grid>
 
             <Grid Grid.Row="1">
-                <Button Width="150" Height="30">Log out</Button>
+                <Button Name="Logout_Button" Click="Logout_Button_Click" Width="150" Height="30">Log out</Button>
             </Grid>
         </Grid>
 

@@ -1,5 +1,19 @@
 ﻿
 
 FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\MainWindow.xaml;;
-FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\StudentsMain.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Accounts\AccountDetails.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Accounts\AccountsMainPage.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Accounts\AccountUpdate.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Pages\LoginPage.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Pages\MainMenuPage.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Student\Pages\StudentDetails.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Student\Pages\StudentMain.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Student\Pages\StudentUpdate.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Student\Pages\StudUpdGroups.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Teacher\Pages\TeacherDetails.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Teacher\Pages\TeacherMain.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Teacher\Pages\TeacherUpdate.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Teacher\Pages\TeaUpdateSubjects.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Teacher\Pages\TeaUpdGroups.xaml;;
+FC:\Users\DKUC\source\repos\SchoolApp\SchoolApp\Views\Upd_Del_Window.xaml;;
 

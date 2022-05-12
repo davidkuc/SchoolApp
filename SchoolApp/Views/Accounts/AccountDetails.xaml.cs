@@ -29,5 +29,10 @@ namespace SchoolApp.Views.Accounts
         {
 
         }
+
+        private void Username_Show_Checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

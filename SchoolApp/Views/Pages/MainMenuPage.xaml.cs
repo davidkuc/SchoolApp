@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SchoolApp.Views.Accounts;
+using SchoolApp.Views.Student;
+using SchoolApp.Views.Teacher;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,32 @@ namespace SchoolApp.Views.Pages
     /// </summary>
     public partial class MainMenuPage : Page
     {
-        public MainMenuPage()
+        private readonly MainWindow _mainWindow;
+
+        public MainMenuPage(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
+        }
+
+        private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.Content = new StudentMain(_mainWindow);
+        }
+
+        private void Teachers_Nav_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.Content = new TeacherMain(_mainWindow);
+        }
+
+        private void Accounts_Nav_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.Content = new AccountsMainPage(_mainWindow);
+        }
+
+        private void Logout_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.Content = new LoginPage(_mainWindow);
         }
     }
 }

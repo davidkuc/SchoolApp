@@ -20,9 +20,16 @@ namespace SchoolApp.Views.Teacher
     /// </summary>
     public partial class TeacherMain : Page
     {
-        public TeacherMain()
+        private readonly MainWindow _mainWindow;
+        public TeacherMain(MainWindow window)
         {
             InitializeComponent();
+            _mainWindow = window;
+        }
+
+        private void TeacherList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

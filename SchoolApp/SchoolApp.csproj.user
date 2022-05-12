@@ -7,22 +7,49 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\Student\StudentDetails.xaml.cs">
+    <Compile Update="Views\Accounts\AccountDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Student\StudentsMain.xaml.cs">
+    <Compile Update="Views\Accounts\AccountsMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Student\StudentUpdate.xaml.cs">
+    <Compile Update="Views\Accounts\AccountUpdate.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\TeacherDetails.xaml.cs">
+    <Compile Update="Views\Pages\LoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\TeacherMain.xaml.cs">
+    <Compile Update="Views\Pages\MainMenuPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\TeacherUpdate.xaml.cs">
+    <Compile Update="Views\Student\Pages\StudUpdGroups.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Student\Pages\StudentDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Student\Pages\StudentUpdate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Student\Pages\StudentMain.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Teacher\Pages\TeacherUpdate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Teacher\Pages\TeacherMain.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Teacher\Pages\TeacherDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Teacher\Pages\TeaUpdateSubjects.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Teacher\Pages\TeaUpdGroups.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Upd_Del_Window.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,22 +57,49 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Student\StudentDetails.xaml">
+    <Page Update="Views\Accounts\AccountDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Student\StudentsMain.xaml">
+    <Page Update="Views\Accounts\AccountsMainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Student\StudentUpdate.xaml">
+    <Page Update="Views\Accounts\AccountUpdate.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\TeacherDetails.xaml">
+    <Page Update="Views\Pages\LoginPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\TeacherMain.xaml">
+    <Page Update="Views\Pages\MainMenuPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\TeacherUpdate.xaml">
+    <Page Update="Views\Student\Pages\StudUpdGroups.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Student\Pages\StudentDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Student\Pages\StudentUpdate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Student\Pages\StudentMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Teacher\Pages\TeacherUpdate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Teacher\Pages\TeacherMain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Teacher\Pages\TeacherDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Teacher\Pages\TeaUpdateSubjects.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Teacher\Pages\TeaUpdGroups.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Upd_Del_Window.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

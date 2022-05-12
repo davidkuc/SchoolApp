@@ -20,9 +20,11 @@ namespace SchoolApp.Views.Accounts
     /// </summary>
     public partial class AccountsMainPage : Page
     {
-        public AccountsMainPage()
+        private readonly MainWindow _mainWindow;
+        public AccountsMainPage(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
         }
 
         private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e)

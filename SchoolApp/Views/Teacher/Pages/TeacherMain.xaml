@@ -85,7 +85,7 @@
 
             <Grid Grid.Row="2">
 
-                <ListBox Name="teacherList" HorizontalContentAlignment="Stretch" 
+                <ListBox Name="TeacherList" HorizontalContentAlignment="Stretch" 
                          SelectionMode="Extended" SelectionChanged="TeacherList_SelectionChanged" Grid.ColumnSpan="6">
                     <ListBox.ItemTemplate>
                         <DataTemplate>

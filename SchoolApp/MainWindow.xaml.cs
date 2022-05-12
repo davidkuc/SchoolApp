@@ -1,4 +1,5 @@
 ﻿using SchoolApp.Views;
+using SchoolApp.Views.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,11 +25,9 @@ namespace SchoolApp
         public MainWindow()
         {
             InitializeComponent();
+            this.Content = new LoginPage(this);
         }
 
-        private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+  
     }
 }

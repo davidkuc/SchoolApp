@@ -20,9 +20,17 @@ namespace SchoolApp.Views.Student
     /// </summary>
     public partial class StudentMain : Page
     {
-        public StudentMain()
+        private readonly MainWindow _mainWindow;
+
+        public StudentMain(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
+        }
+
+        private void studentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
