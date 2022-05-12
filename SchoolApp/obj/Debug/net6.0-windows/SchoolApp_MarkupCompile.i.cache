@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\App.xaml
-4-1552103163
+7-1982359732
 
-10-422834348
+132002732749
 194-1951243044
-MainWindow.xaml;Views\StudentDetails.xaml;Views\StudentsMain.xaml;Views\StudentUpdate.xaml;
+MainWindow.xaml;Views\Student\StudentDetails.xaml;Views\Student\StudentsMain.xaml;Views\Student\StudentUpdate.xaml;Views\Teacher\TeacherDetails.xaml;Views\Teacher\TeacherMain.xaml;Views\Teacher\TeacherUpdate.xaml;
 
-True
+False
 
