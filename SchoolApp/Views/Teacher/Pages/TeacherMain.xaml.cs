@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SchoolApp.Views
+namespace SchoolApp.Views.Teacher
 {
     /// <summary>
-    /// Interaction logic for StudentDetails.xaml
+    /// Interaction logic for TeachMain.xaml
     /// </summary>
-    public partial class StudentDetails : Window
+    public partial class TeacherMain : Page
     {
-        public StudentDetails()
+        public TeacherMain()
         {
             InitializeComponent();
         }

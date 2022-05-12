@@ -1,11 +1,13 @@
-﻿<Window x:Class="SchoolApp.Views.StudentDetails"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SchoolApp.Views.Student"
-        mc:Ignorable="d"
-        Title="StudentDetails" Height="300" Width="600">
+﻿<Page x:Class="SchoolApp.Views.Teacher.Pages.TeacherUpdate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchoolApp.Views.Teacher.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TeacherUpdate">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -14,10 +16,10 @@
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" Background="Beige" BorderThickness="3" BorderBrush="DarkGray">
-             <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
-                   FontSize="30">Student Details</TextBlock>
+            <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="30">Update Teacher</TextBlock>
         </Border>
-       
+
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -53,23 +55,24 @@
 
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="1.7*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0"  FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center">Year</TextBlock>
-                <TextBlock Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Year}"></TextBlock>
-                <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center">Course</TextBlock>
-                <TextBlock Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Course}"></TextBlock>
+                <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                         FontWeight="Bold"  >Subjects</TextBlock>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                </Grid>
+
+                <ListView Name="SubjectList" Grid.Row="2"></ListView>
+                <Button Grid.Row="2" Width="70" Name="EditSubjects_Button">Edit</Button>
             </Grid>
 
             <Grid Grid.Column="2">
@@ -77,6 +80,7 @@
                     <RowDefinition Height="0.2*"></RowDefinition>
                     <RowDefinition Height="0.2*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -95,13 +99,13 @@
                           >Code</TextBlock>
                 </Grid>
 
-                <ListView Grid.Row="2"></ListView>
+                <ListView Name="GroupList" Grid.Row="2"></ListView>
 
-             
+                <Button Grid.Row="3" Width="70" Name="EditGroups_Button">Edit</Button>
             </Grid>
-               
+
         </Grid>
-        
+
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -125,9 +129,9 @@
                         Name="DeleteStud_Button" Background="OrangeRed">Delete</Button>
 
             </Grid>
-            
+
         </Grid>
-        
-        
+
+
     </Grid>
-</Window>
+</Page>

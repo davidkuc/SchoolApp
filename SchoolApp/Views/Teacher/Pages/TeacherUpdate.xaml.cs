@@ -10,23 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SchoolApp.Views.Teacher
+namespace SchoolApp.Views.Teacher.Pages
 {
     /// <summary>
-    /// Interaction logic for TeacherMain.xaml
+    /// Interaction logic for TeacherUpdate.xaml
     /// </summary>
-    public partial class TeacherMain : Window
+    public partial class TeacherUpdate : Page
     {
-        public TeacherMain()
+        public TeacherUpdate()
         {
             InitializeComponent();
-        }
-
-        private void TeacherList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

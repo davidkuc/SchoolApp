@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SchoolApp.Views.Teacher
+namespace SchoolApp.Views
 {
     /// <summary>
-    /// Interaction logic for TeacherDetails.xaml
+    /// Interaction logic for Upd_Del_Window.xaml
     /// </summary>
-    public partial class TeacherDetails : Window
+    public partial class Upd_Del_Window : Window
     {
-        public TeacherDetails()
+        public Upd_Del_Window()
         {
             InitializeComponent();
         }
