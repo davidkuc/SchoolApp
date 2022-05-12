@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\App.xaml
-91135795819
+10-543504882
 
-15-2076882852
+16919175009
 194-1951243044
-MainWindow.xaml;Views\Student\Pages\StudentDetails.xaml;Views\Student\Pages\StudentMain.xaml;Views\Student\Pages\StudentUpdate.xaml;Views\Student\Pages\StudUpdGroups.xaml;Views\Teacher\Pages\TeacherDetails.xaml;Views\Teacher\Pages\TeacherMain.xaml;Views\Teacher\Pages\TeacherUpdate.xaml;Views\Upd_Del_Window.xaml;
+MainWindow.xaml;Views\Student\Pages\StudentDetails.xaml;Views\Student\Pages\StudentMain.xaml;Views\Student\Pages\StudentUpdate.xaml;Views\Student\Pages\StudUpdGroups.xaml;Views\Teacher\Pages\TeacherDetails.xaml;Views\Teacher\Pages\TeacherMain.xaml;Views\Teacher\Pages\TeacherUpdate.xaml;Views\Teacher\Pages\TeaUpdGroups.xaml;Views\Upd_Del_Window.xaml;
 
-False
+True
 
