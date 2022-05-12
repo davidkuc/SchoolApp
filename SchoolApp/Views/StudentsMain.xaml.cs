@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SchoolApp.Models;
 
 namespace SchoolApp.Views
 {
@@ -22,6 +23,11 @@ namespace SchoolApp.Views
         public StudentsMain()
         {
             InitializeComponent();
+            List<Student> students = new List<Student>();
+            students.Add(new Student() { ID = 1, Name = "Brian", Course = "Data"});
+            students.Add(new Student() { ID = 2, Name = "Gib", Course = "Data" });
+            students.Add(new Student() { ID = 3, Name = "Meg", Course = "Data" });
+            studentList.ItemsSource = students;
         }
 
         private void StudentList_SelectionChanged(object sender, SelectionChangedEventArgs e)

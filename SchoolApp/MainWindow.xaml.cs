@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace SchoolApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new StudentsMain();
+            window.Show();
+
         }
     }
 }
