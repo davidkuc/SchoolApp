@@ -10,18 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SchoolApp.Views
+namespace SchoolApp.Views.Accounts
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Interaction logic for AccountDetails.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class AccountDetails : Page
     {
-        public LoginWindow()
+        public AccountDetails()
         {
             InitializeComponent();
+        }
+
+        private void Password_Show_Checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using SchoolApp.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,19 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SchoolApp
+namespace SchoolApp.Views.Accounts
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AccountsMainPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AccountsMainPage : Page
     {
-        public MainWindow()
+        public AccountsMainPage()
         {
             InitializeComponent();
         }
 
-        private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
+        private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
