@@ -43,12 +43,12 @@ namespace SchoolApp.Views.Teacher.Pages
 
         private void EditGroups_Button_Click(object sender, RoutedEventArgs e)
         {
-            _updDelWindow.Content = new TeaUpdGroups(this);
+            _updDelWindow.Content = new TeaUpdGroups(_updDelWindow, this);
         }
 
         private void EditSubjects_Button_Click(object sender, RoutedEventArgs e)
         {
-            _updDelWindow.Content = new TeaUpdateSubjects(this);
+            _updDelWindow.Content = new TeaUpdateSubjects(_updDelWindow,this);
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)

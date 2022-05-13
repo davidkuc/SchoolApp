@@ -21,11 +21,13 @@ namespace SchoolApp.Views.Student.Pages
     public partial class StudentDetails : Page
     {
         private readonly Upd_Del_Window _updDelWindow;
+        private readonly StudentMain _studMain;
 
-        public StudentDetails(Upd_Del_Window updDelWindow)
+        public StudentDetails(Upd_Del_Window updDelWindow, StudentMain studMain)
         {
             InitializeComponent();
             _updDelWindow = updDelWindow;
+            _studMain = studMain;
             updDelWindow.Content = this;
             _updDelWindow.Show();
         }
@@ -37,7 +39,7 @@ namespace SchoolApp.Views.Student.Pages
 
         private void UpdateStud_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            _updDelWindow.Content = new StudentUpdate(_updDelWindow, this);
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)

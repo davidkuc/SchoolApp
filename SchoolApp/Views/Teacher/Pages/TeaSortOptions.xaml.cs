@@ -20,9 +20,25 @@ namespace SchoolApp.Views.Teacher.Pages
     /// </summary>
     public partial class TeaSortOptions : Page
     {
-        public TeaSortOptions()
+        private readonly SortOptionsWindow _sortOptionsWindow;
+        private readonly TeacherMain _teaMain;
+
+        public TeaSortOptions(SortOptionsWindow sortOptionsWindow, TeacherMain teaMain)
         {
             InitializeComponent();
+            _sortOptionsWindow = sortOptionsWindow;
+            _teaMain = teaMain;
+        }
+
+        private void Submit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            //
+            _sortOptionsWindow.Close();
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _sortOptionsWindow.Close();
         }
     }
 }

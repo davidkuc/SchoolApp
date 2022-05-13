@@ -21,11 +21,13 @@ namespace SchoolApp.Views.Accounts
     public partial class AccountDetails : Page
     {
         private Upd_Del_Window _updDelWindow;
+        private readonly AccountsMainPage _accMain;
 
-        public AccountDetails(Upd_Del_Window updDelWindow)
+        public AccountDetails(Upd_Del_Window updDelWindow, AccountsMainPage accMain)
         {
             InitializeComponent();
             _updDelWindow = updDelWindow;
+            _accMain = accMain;
             updDelWindow.Content = this;
             _updDelWindow.Show();
         }
@@ -47,7 +49,7 @@ namespace SchoolApp.Views.Accounts
 
         private void UpdateAcc_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            _updDelWindow.Content = new AccountUpdate(_updDelWindow, this);
         }
 
         private void DeleteAcc_Button_Click(object sender, RoutedEventArgs e)

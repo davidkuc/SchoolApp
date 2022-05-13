@@ -58,7 +58,7 @@ namespace SchoolApp.Views.Accounts
         private void SortOptions_Button_Click(object sender, RoutedEventArgs e)
         {
             var sortOptions = new SortOptionsWindow();
-            sortOptions.Content = new AccountSortOptions(this);
+            sortOptions.Content = new AccountSortOptions(sortOptions, this);
             sortOptions.Show();
         }
 
@@ -74,7 +74,9 @@ namespace SchoolApp.Views.Accounts
 
         private void AccDetails_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new AccountDetails(_mainWindow, this);
+            var detWindow = new Upd_Del_Window();
+            detWindow.Content = new AccountDetails(detWindow, this);
+            detWindow.Show();
         }
     }
 }

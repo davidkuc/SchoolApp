@@ -22,23 +22,25 @@ namespace SchoolApp.Views.Teacher.Windows
     public partial class TeacherDetails : Page
     {
         private readonly Upd_Del_Window _updDelWindow;
+        private readonly TeacherMain _teaMain;
 
-        public TeacherDetails(Upd_Del_Window updDelWindow)
+        public TeacherDetails(Upd_Del_Window updDelWindow, TeacherMain teaMain)
         {
             InitializeComponent();
             _updDelWindow = updDelWindow;
+            _teaMain = teaMain;
             updDelWindow.Content = this;
             _updDelWindow.Show();
         }
 
-        private void DeleteStud_Button_Click(object sender, RoutedEventArgs e)
+        private void Delete_Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
         private void Update_Button_Click(object sender, RoutedEventArgs e)
         {
-            _updDelWindow.Content = new TeacherUpdate(this);
+            _updDelWindow.Content = new TeacherUpdate(_updDelWindow, this);
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)

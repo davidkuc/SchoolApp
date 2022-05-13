@@ -59,7 +59,9 @@ namespace SchoolApp.Views.Student
 
         private void StudDetails_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new StudentDetails();
+            var updDelWindow = new Upd_Del_Window();
+            updDelWindow.Content = new StudentDetails(updDelWindow, this);
+            updDelWindow.Show();
         }
 
         private void StudSortOptions_Button_Click(object sender, RoutedEventArgs e)

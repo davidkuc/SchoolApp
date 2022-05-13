@@ -1,4 +1,5 @@
 ﻿using SchoolApp.Views.Pages;
+using SchoolApp.Views.Teacher.Pages;
 using SchoolApp.Views.Teacher.Windows;
 using System;
 using System.Collections.Generic;
@@ -56,7 +57,9 @@ namespace SchoolApp.Views.Teacher
 
         private void SortOptions_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new TeacherSortOptions();
+            var sortOptionsWindow = new SortOptionsWindow();
+            sortOptionsWindow.Content = new TeaSortOptions(sortOptionsWindow, this);
+            sortOptionsWindow.Show();
         }
 
         private void PrevPage_Button_Click(object sender, RoutedEventArgs e)
@@ -71,7 +74,9 @@ namespace SchoolApp.Views.Teacher
 
         private void TeacherDetails_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new TeacherDetails();
+            var updDelWindow = new Upd_Del_Window();
+            updDelWindow.Content = new TeacherDetails(updDelWindow, this);
+            updDelWindow.Show();
         }
     }
 }

@@ -49,3 +49,11 @@ C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Te
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Teacher\Pages\TeaUpdateSubjects.baml
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Teacher\Pages\TeaUpdGroups.baml
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Upd_Del_Window.baml
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Accounts\AccountSortOptions.g.cs
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\SortOptionsWindow.g.cs
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Student\Pages\StudSortOptions.g.cs
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Teacher\Pages\TeaSortOptions.g.cs
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Accounts\AccountSortOptions.baml
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\SortOptionsWindow.baml
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Student\Pages\StudSortOptions.baml
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Teacher\Pages\TeaSortOptions.baml

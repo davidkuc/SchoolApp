@@ -13,6 +13,9 @@
     <Compile Update="Views\Accounts\AccountsMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Accounts\AccountSortOptions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Accounts\AccountUpdate.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -20,6 +23,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Pages\MainMenuPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SortOptionsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Student\Pages\StudSortOptions.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Student\Pages\StudUpdGroups.xaml.cs">
@@ -43,6 +52,9 @@
     <Compile Update="Views\Teacher\Pages\TeacherDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Teacher\Pages\TeaSortOptions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Teacher\Pages\TeaUpdateSubjects.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -63,6 +75,9 @@
     <Page Update="Views\Accounts\AccountsMainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Accounts\AccountSortOptions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Accounts\AccountUpdate.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -70,6 +85,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Pages\MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SortOptionsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Student\Pages\StudSortOptions.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Student\Pages\StudUpdGroups.xaml">
@@ -91,6 +112,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Teacher\Pages\TeacherDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Teacher\Pages\TeaSortOptions.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Teacher\Pages\TeaUpdateSubjects.xaml">

@@ -20,9 +20,25 @@ namespace SchoolApp.Views.Student.Pages
     /// </summary>
     public partial class StudSortOptions : Page
     {
-        public StudSortOptions()
+        private readonly SortOptionsWindow _sortOptionsWindow;
+        private readonly StudentMain _studMain;
+
+        public StudSortOptions(SortOptionsWindow sortOptionsWindow, StudentMain studMain)
         {
             InitializeComponent();
+            _sortOptionsWindow = sortOptionsWindow;
+            _studMain = studMain;
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {      
+            _sortOptionsWindow.Close();
+        }
+
+        private void Submit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            //
+            _sortOptionsWindow.Close();
         }
     }
 }
