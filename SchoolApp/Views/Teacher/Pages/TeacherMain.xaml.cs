@@ -54,7 +54,7 @@ namespace SchoolApp.Views.Teacher
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new LoginPage();
+            _mainWindow.Content = new LoginPage(_mainWindow);
         }
 
         private void SortOptions_Button_Click(object sender, RoutedEventArgs e)

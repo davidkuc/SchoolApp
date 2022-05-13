@@ -28,12 +28,6 @@ namespace SchoolApp.Views.Pages
             _mainWindow = mainWindow;
         }
 
-        public LoginPage()
-        {
-            InitializeComponent();
-            _mainWindow = new MainWindow();
-        }
-
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
             _mainWindow.Content = new MainMenuPage(_mainWindow);
