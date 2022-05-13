@@ -21,7 +21,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Border BorderBrush="DarkGray" BorderThickness="3"></Border>
+          
             <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.5*"></RowDefinition>

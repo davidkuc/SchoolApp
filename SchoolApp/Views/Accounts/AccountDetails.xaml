@@ -91,7 +91,8 @@
 
 
             <Button Grid.Column="0" Height="30" Width="70" 
-                        Name="GoBack_Button" Background="Beige">Go back</Button>
+                        Name="GoBack_Button" Background="Beige"
+                    Click="GoBack_Button_Click">Go back</Button>
 
             <Grid Grid.Column="2">
                 <Grid.ColumnDefinitions>
@@ -100,9 +101,11 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.Column="0" Height="30" Width="70" 
-                        Name="UpdateStud_Button" Background="Beige">Update</Button>
+                        Name="UpdateAcc_Button" Background="Beige"
+                        Click="UpdateAcc_Button_Click">Update</Button>
                 <Button Grid.Column="1" Height="30" Width="70" 
-                        Name="DeleteStud_Button" Background="OrangeRed">Delete</Button>
+                        Name="DeleteAcc_Button" Background="OrangeRed"
+                        Click="DeleteAcc_Button_Click">Delete</Button>
 
             </Grid>
 

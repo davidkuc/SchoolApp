@@ -20,9 +20,29 @@ namespace SchoolApp.Views.Student.Pages
     /// </summary>
     public partial class StudentUpdate : Page
     {
-        public StudentUpdate()
+        private readonly Upd_Del_Window _updDelWindow;
+        private readonly StudentDetails _studDet;
+
+        public StudentUpdate(Upd_Del_Window updDelWindow, StudentDetails studDet)
         {
             InitializeComponent();
+            _updDelWindow = updDelWindow;
+            _studDet = studDet;
+        }
+
+        private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditGroups_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow.Content = _studDet;
         }
     }
 }

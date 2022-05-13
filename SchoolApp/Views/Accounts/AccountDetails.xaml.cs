@@ -20,9 +20,14 @@ namespace SchoolApp.Views.Accounts
     /// </summary>
     public partial class AccountDetails : Page
     {
-        public AccountDetails()
+        private Upd_Del_Window _updDelWindow;
+
+        public AccountDetails(Upd_Del_Window updDelWindow)
         {
             InitializeComponent();
+            _updDelWindow = updDelWindow;
+            updDelWindow.Content = this;
+            _updDelWindow.Show();
         }
 
         private void Password_Show_Checkbox_Checked(object sender, RoutedEventArgs e)
@@ -31,6 +36,21 @@ namespace SchoolApp.Views.Accounts
         }
 
         private void Username_Show_Checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow?.Close();
+        }
+
+        private void UpdateAcc_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteAcc_Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

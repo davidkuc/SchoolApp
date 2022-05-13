@@ -20,9 +20,29 @@ namespace SchoolApp.Views.Student.Pages
     /// </summary>
     public partial class StudentDetails : Page
     {
-        public StudentDetails()
+        private readonly Upd_Del_Window _updDelWindow;
+
+        public StudentDetails(Upd_Del_Window updDelWindow)
         {
             InitializeComponent();
+            _updDelWindow = updDelWindow;
+            updDelWindow.Content = this;
+            _updDelWindow.Show();
+        }
+
+        private void DeleteStud_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UpdateStud_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow?.Close();
         }
     }
 }

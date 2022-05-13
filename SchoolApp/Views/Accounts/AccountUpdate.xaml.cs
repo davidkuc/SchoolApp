@@ -20,9 +20,25 @@ namespace SchoolApp.Views.Accounts
     /// </summary>
     public partial class AccountUpdate : Page
     {
-        public AccountUpdate()
+        private readonly Upd_Del_Window _updDelWindow;
+        private readonly AccountDetails _accDet;
+
+        public AccountUpdate(Upd_Del_Window updDelWindow, AccountDetails accDet)
         {
             InitializeComponent();
+
+            _updDelWindow = updDelWindow;
+            _accDet = accDet;
+        }
+
+        private void Confirm_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow.Content = _accDet;
         }
     }
 }

@@ -39,21 +39,21 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <Button Width="100" Height="50">Home</Button>
+                    <Button Name="Home_Nav_Button" Click="Home_Nav_Button_Click" Width="100" Height="50">Home</Button>
                 </Grid>
 
                 <Grid Grid.Row="2">
-                    <Button Width="100" Height="50">Teachers</Button>
+                    <Button Name="Teacher_Nav_Button" Click="Teacher_Nav_Button_Click" Width="100" Height="50">Teachers</Button>
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <Button Width="100" Height="50">Accounts</Button>
+                    <Button Name="Accounts_Nav_Button" Click="Accounts_Nav_Button_Click" Width="100" Height="50">Accounts</Button>
                 </Grid>
 
             </Grid>
 
             <Grid Grid.Row="1">
-                <Button Width="150" Height="30">Log out</Button>
+                <Button Name="Logout_Button" Click="Logout_Button_Click" Width="150" Height="30">Log out</Button>
             </Grid>
         </Grid>
 
@@ -85,8 +85,8 @@
 
             <Grid Grid.Row="2">
 
-                <ListBox Name="studentList" HorizontalContentAlignment="Stretch" 
-                         SelectionMode="Extended" SelectionChanged="studentList_SelectionChanged" Grid.ColumnSpan="6">
+                <ListBox Name="StudentList" HorizontalContentAlignment="Stretch" 
+                         SelectionMode="Extended" SelectionChanged="StudentList_SelectionChanged" Grid.ColumnSpan="6">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid Margin="5">
@@ -112,7 +112,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Height="30" Width="90"
-                            Grid.Column="0" Name="SortOptions_Button">
+                            Grid.Column="0" Name="StudSortOptions_Button" Click="StudSortOptions_Button_Click">
                     Sort options
                 </Button>
 
@@ -122,11 +122,11 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Button Height="30" Width="50"
+                    <Button Click="PrevPage_Button_Click" Height="30" Width="50"
                             Grid.Column="0" Name="PrevPage_Button">
                         Prev
                     </Button>
-                    <Button Height="30" Width="50" 
+                    <Button Click="NextPage_Button_Click" Height="30" Width="50" 
                             Grid.Column="1" Name="NextPage_Button">
                         Next
                     </Button>
@@ -149,7 +149,7 @@
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Button Height="30" Width="70" Name="StudDetails_Button">Details</Button>
+                <Button Click="StudDetails_Button_Click" Height="30" Width="70" Name="StudDetails_Button">Details</Button>
             </Grid>
         </Grid>
     </Grid>

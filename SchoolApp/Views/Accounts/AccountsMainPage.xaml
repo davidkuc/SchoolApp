@@ -149,7 +149,7 @@
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Button Click="StudDetails_Button_Click" Height="30" Width="70" Name="StudDetails_Button">Details</Button>
+                <Button Click="AccDetails_Button_Click" Height="30" Width="70" Name="AccDetails_Button">Details</Button>
             </Grid>
         </Grid>
     </Grid>
