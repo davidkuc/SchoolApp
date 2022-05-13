@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using SchoolApp_EFCore.Context;
 using SchoolApp_EFCore.Repositories;
 using System;
@@ -26,12 +27,13 @@ namespace SchoolApp
 
         private void ConfigureServices(ServiceCollection services)
         {
-            services.AddDbContext<InMemoryDbContext>();
+            services.AddDbContext<DbContext, InMemoryDbContext>();
+            services.AddSingleton<RepoPack>();
             services.AddSingleton<MainWindow>();
             services.AddSingleton<AccRepository>();
             services.AddSingleton<TeaRepository>();
             services.AddSingleton<StudRepository>();
-            services.AddSingleton<RepoPack>();
+
         }
         private void OnStartup(object sender, StartupEventArgs e)
         {

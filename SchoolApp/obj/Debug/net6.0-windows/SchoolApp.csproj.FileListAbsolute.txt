@@ -92,3 +92,5 @@ C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\bin\Debug\net6.0-windows\runtimes
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\SchoolApp.csproj.CopyComplete
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\bin\Debug\net6.0-windows\SchoolApp_EFCore.dll
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\bin\Debug\net6.0-windows\SchoolApp_EFCore.pdb
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Pages\BasePage.g.cs
+C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\obj\Debug\net6.0-windows\Views\Pages\BasePage.baml

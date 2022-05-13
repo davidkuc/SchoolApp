@@ -41,12 +41,15 @@
 
                     <TextBlock Grid.Row="0" HorizontalAlignment="Center"
                                VerticalAlignment="Center">Login</TextBlock>
-                    <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
-                               VerticalAlignment="Center" Width="100"></TextBox>
+                    <TextBox Name="Login_TextBox"
+                        Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
+                               VerticalAlignment="Center" Width="100"
+                             Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                     <TextBlock Grid.Row="1" HorizontalAlignment="Center"
                                VerticalAlignment="Center">Password</TextBlock>
                     <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
-                               VerticalAlignment="Center" Width="100"></TextBox>
+                               VerticalAlignment="Center" Width="100"
+                              Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
                     <Button  Name="Login_Button" Click="Login_Button_Click" Grid.Row="2" Grid.Column="1"
                              Width="90" Height="30">Login</Button>

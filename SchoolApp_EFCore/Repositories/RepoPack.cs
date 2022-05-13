@@ -12,9 +12,9 @@ namespace SchoolApp_EFCore.Repositories
         private readonly TeaRepository _teaRepo;
         private readonly StudRepository _studRepo;
 
-        public AccRepository AccRepo { get; }
-        public TeaRepository TeaRepo { get; }
-        public StudRepository StudRepo { get; }
+        public AccRepository AccRepo => _accRepo;
+        public TeaRepository TeaRepo => _teaRepo;
+        public StudRepository StudRepo => _studRepo;
 
         public RepoPack(AccRepository accRepo,
                         TeaRepository teaRepo,

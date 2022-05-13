@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp_EFCore.Models
+namespace SchoolApp.Models
 {
-    public class Account : IEntity
+    public class AccountModel
     {
         public int ID { get; set; }
 
@@ -16,6 +16,8 @@ namespace SchoolApp_EFCore.Models
 
         public string Name { get; set; }
         public string Surname { get; set; }
+
+        public string Owner => $"{Name} {Surname}";
 
         public bool HasAdminPrivileges { get; set; }
     }
