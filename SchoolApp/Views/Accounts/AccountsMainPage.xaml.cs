@@ -58,7 +58,7 @@ namespace SchoolApp.Views.Accounts
         private void SortOptions_Button_Click(object sender, RoutedEventArgs e)
         {
             var sortOptions = new SortOptionsWindow();
-            sortOptions.Content = new AccountSortOptions();
+            sortOptions.Content = new AccountSortOptions(this);
             sortOptions.Show();
         }
 

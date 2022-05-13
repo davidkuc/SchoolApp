@@ -20,9 +20,25 @@ namespace SchoolApp.Views.Accounts
     /// </summary>
     public partial class AccountSortOptions : Page
     {
-        public AccountSortOptions()
+        private readonly SortOptionsWindow _sortOptWind;
+        private readonly AccountsMainPage _accMain;
+
+        public AccountSortOptions(SortOptionsWindow sortOptWind, AccountsMainPage accMain)
         {
             InitializeComponent();
+           _sortOptWind = sortOptWind;
+            _accMain = accMain;
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _sortOptWind.Close();
+        }
+
+        private void Submit_Button_Click(object sender, RoutedEventArgs e)
+        {
+            //
+            _sortOptWind.Close();
         }
     }
 }
