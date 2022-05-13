@@ -25,6 +25,8 @@ namespace SchoolApp_EFCore.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<StudentGroups>().HasKey(ck => new { ck.StudentId, ck.GroupId });
+            modelBuilder.Entity<TeacherSubjects>().HasKey(ck => new { ck.TeacherId, ck.SubjectId });
+            modelBuilder.Entity<TeacherGroups>().HasKey(ck => new { ck.TeacherId, ck.GroupId });
         }
 
     }

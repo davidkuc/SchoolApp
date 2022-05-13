@@ -12,6 +12,6 @@ namespace SchoolApp_EFCore.Models
 
         public string Subject { get; set; }
 
-        public ICollection<Student> Students { get; set; }
+        public ICollection<StudentGroups> StudentGroups { get; set; }
     }
 }

@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace SchoolApp.Models
 {
-    internal class StudentModel
+    public class StudentModel
     {
+
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Course { get; set; }
+        public int Year { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public ICollection<GroupModel> Groups { get; set; }
     }
 }
