@@ -24,10 +24,7 @@ namespace SchoolApp_EFCore.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Account>().
-                HasData(
-                new Account() { ID = -1, Username = "admin", Password = "admin", Name = "Krul", Surname = "Bazy", HasAdminPrivileges = true }
-                );
+            modelBuilder.Entity<StudentGroups>().HasKey(ck => new { ck.StudentId, ck.GroupId });
         }
 
     }
