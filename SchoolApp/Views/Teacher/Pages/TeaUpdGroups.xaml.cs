@@ -20,9 +20,34 @@ namespace SchoolApp.Views.Teacher.Pages
     /// </summary>
     public partial class TeaUpdGroups : Page
     {
-        public TeaUpdGroups()
+        private readonly Upd_Del_Window _updDelWindow;
+        private readonly TeacherUpdate  _teaUpd;
+
+        public TeaUpdGroups(Upd_Del_Window updDelWindow, TeacherUpdate teaUpd)
         {
             InitializeComponent();
+            _updDelWindow = updDelWindow;
+            _teaUpd = teaUpd;
+        }
+
+        private void Confirm_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddGroup_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteGroup_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow.Content = _teaUpd;
         }
     }
 }

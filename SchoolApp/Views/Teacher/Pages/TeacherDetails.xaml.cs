@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolApp.Views.Teacher.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,29 @@ namespace SchoolApp.Views.Teacher.Windows
     /// </summary>
     public partial class TeacherDetails : Page
     {
-        public TeacherDetails()
+        private readonly Upd_Del_Window _updDelWindow;
+
+        public TeacherDetails(Upd_Del_Window updDelWindow)
         {
             InitializeComponent();
+            _updDelWindow = updDelWindow;
+            updDelWindow.Content = this;
+            _updDelWindow.Show();
+        }
+
+        private void DeleteStud_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Update_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow.Content = new TeacherUpdate(this);
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow?.Close();
         }
     }
 }

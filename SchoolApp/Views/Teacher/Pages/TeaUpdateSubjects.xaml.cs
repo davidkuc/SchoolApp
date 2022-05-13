@@ -20,9 +20,34 @@ namespace SchoolApp.Views.Teacher.Pages
     /// </summary>
     public partial class TeaUpdateSubjects : Page
     {
-        public TeaUpdateSubjects()
+        private readonly Upd_Del_Window _updDelWindow;
+        private readonly TeacherUpdate  _teaUpd;
+
+        public TeaUpdateSubjects(Upd_Del_Window updDelWindow, TeacherUpdate teaUpd)
         {
             InitializeComponent();
+            _updDelWindow = updDelWindow;
+            _teaUpd = teaUpd;
+        }
+
+        private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddSubject_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteSubject_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow.Content = _teaUpd;
         }
     }
 }
