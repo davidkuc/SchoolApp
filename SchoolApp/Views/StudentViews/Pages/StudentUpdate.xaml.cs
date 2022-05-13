@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SchoolApp.Views.Student.Pages
+namespace SchoolApp.Views.StudentViews.Pages
 {
     /// <summary>
     /// Interaction logic for StudentUpdate.xaml

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SchoolApp.Models;
 using SchoolApp.Views.Accounts;
 using SchoolApp.Views.Pages;
-using SchoolApp.Views.Student.Pages;
 using SchoolApp.Views.Teacher;
 using SchoolApp_EFCore.Repositories;
 using System;
@@ -19,7 +19,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SchoolApp.Views.Student
+namespace SchoolApp.Views.StudentViews.Pages
 {
     /// <summary>
     /// Interaction logic for StudentMain.xaml
@@ -28,7 +28,7 @@ namespace SchoolApp.Views.Student
     {
         private readonly MainWindow _mainWindow;
         private readonly RepoPack _repoPack;
-        private readonly List<Student> _students;
+        private readonly List<StudentModel> _students;
 
         public StudentMain(MainWindow mainWindow, RepoPack repoPack)
         {
@@ -73,7 +73,7 @@ namespace SchoolApp.Views.Student
         private void StudSortOptions_Button_Click(object sender, RoutedEventArgs e)
         {
             var sortOptionsWindow = new SortOptionsWindow();
-           sortOptionsWindow.Content = new StudSortOptions(sortOptionsWindow, this);
+            sortOptionsWindow.Content = new StudSortOptions(sortOptionsWindow, this);
             sortOptionsWindow.Show();
         }
 

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchoolApp.Views.Accounts;
-using SchoolApp.Views.Student;
+using SchoolApp.Views.StudentViews.Pages;
 using SchoolApp.Views.Teacher;
 using SchoolApp_EFCore.Repositories;
 using System;

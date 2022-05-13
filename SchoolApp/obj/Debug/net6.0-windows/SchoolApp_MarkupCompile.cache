@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\DKUC\source\repos\SchoolApp\SchoolApp\App.xaml
-21779618448
+20328637913
 
-25332371691
+31-1387429826
 216-1438020302
-MainWindow.xaml;Views\Accounts\AccountDetails.xaml;Views\Accounts\AccountsMainPage.xaml;Views\Accounts\AccountSortOptions.xaml;Views\Accounts\AccountUpdate.xaml;Views\Pages\BasePage.xaml;Views\Pages\LoginPage.xaml;Views\Pages\MainMenuPage.xaml;Views\SortOptionsWindow.xaml;Views\Student\Pages\StudentDetails.xaml;Views\Student\Pages\StudentMain.xaml;Views\Student\Pages\StudentUpdate.xaml;Views\Student\Pages\StudSortOptions.xaml;Views\Student\Pages\StudUpdGroups.xaml;Views\Teacher\Pages\TeacherDetails.xaml;Views\Teacher\Pages\TeacherMain.xaml;Views\Teacher\Pages\TeacherUpdate.xaml;Views\Teacher\Pages\TeaSortOptions.xaml;Views\Teacher\Pages\TeaUpdateSubjects.xaml;Views\Teacher\Pages\TeaUpdGroups.xaml;Views\Upd_Del_Window.xaml;
+MainWindow.xaml;Views\AccountViews\AccountDetails.xaml;Views\AccountViews\AccountsMainPage.xaml;Views\AccountViews\AccountSortOptions.xaml;Views\AccountViews\AccountUpdate.xaml;Views\Pages\LoginPage.xaml;Views\Pages\MainMenuPage.xaml;Views\SortOptionsWindow.xaml;Views\StudentViews\Pages\StudentDetails.xaml;Views\StudentViews\Pages\StudentMain.xaml;Views\StudentViews\Pages\StudentUpdate.xaml;Views\StudentViews\Pages\StudSortOptions.xaml;Views\StudentViews\Pages\StudUpdGroups.xaml;Views\TeacherViews\Pages\TeacherDetails.xaml;Views\TeacherViews\Pages\TeacherMain.xaml;Views\TeacherViews\Pages\TeacherUpdate.xaml;Views\TeacherViews\Pages\TeaSortOptions.xaml;Views\TeacherViews\Pages\TeaUpdateSubjects.xaml;Views\TeacherViews\Pages\TeaUpdGroups.xaml;Views\Upd_Del_Window.xaml;
 
-False
+True
 

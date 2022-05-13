@@ -7,16 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\Accounts\AccountDetails.xaml.cs">
+    <Compile Update="Views\AccountViews\AccountDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Accounts\AccountsMainPage.xaml.cs">
+    <Compile Update="Views\AccountViews\AccountsMainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Accounts\AccountSortOptions.xaml.cs">
+    <Compile Update="Views\AccountViews\AccountSortOptions.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Accounts\AccountUpdate.xaml.cs">
+    <Compile Update="Views\AccountViews\AccountUpdate.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Pages\LoginPage.xaml.cs">
@@ -28,37 +28,37 @@
     <Compile Update="Views\SortOptionsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Student\Pages\StudSortOptions.xaml.cs">
+    <Compile Update="Views\StudentViews\Pages\StudSortOptions.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Student\Pages\StudUpdGroups.xaml.cs">
+    <Compile Update="Views\StudentViews\Pages\StudUpdGroups.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Student\Pages\StudentDetails.xaml.cs">
+    <Compile Update="Views\StudentViews\Pages\StudentDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Student\Pages\StudentUpdate.xaml.cs">
+    <Compile Update="Views\StudentViews\Pages\StudentUpdate.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Student\Pages\StudentMain.xaml.cs">
+    <Compile Update="Views\StudentViews\Pages\StudentMain.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\Pages\TeacherUpdate.xaml.cs">
+    <Compile Update="Views\TeacherViews\Pages\TeacherUpdate.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\Pages\TeacherMain.xaml.cs">
+    <Compile Update="Views\TeacherViews\Pages\TeacherMain.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\Pages\TeacherDetails.xaml.cs">
+    <Compile Update="Views\TeacherViews\Pages\TeacherDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\Pages\TeaSortOptions.xaml.cs">
+    <Compile Update="Views\TeacherViews\Pages\TeaSortOptions.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\Pages\TeaUpdateSubjects.xaml.cs">
+    <Compile Update="Views\TeacherViews\Pages\TeaUpdateSubjects.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Teacher\Pages\TeaUpdGroups.xaml.cs">
+    <Compile Update="Views\TeacherViews\Pages\TeaUpdGroups.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Upd_Del_Window.xaml.cs">
@@ -69,16 +69,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Accounts\AccountDetails.xaml">
+    <Page Update="Views\AccountViews\AccountDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Accounts\AccountsMainPage.xaml">
+    <Page Update="Views\AccountViews\AccountsMainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Accounts\AccountSortOptions.xaml">
+    <Page Update="Views\AccountViews\AccountSortOptions.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Accounts\AccountUpdate.xaml">
+    <Page Update="Views\AccountViews\AccountUpdate.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Pages\LoginPage.xaml">
@@ -90,37 +90,37 @@
     <Page Update="Views\SortOptionsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Student\Pages\StudSortOptions.xaml">
+    <Page Update="Views\StudentViews\Pages\StudSortOptions.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Student\Pages\StudUpdGroups.xaml">
+    <Page Update="Views\StudentViews\Pages\StudUpdGroups.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Student\Pages\StudentDetails.xaml">
+    <Page Update="Views\StudentViews\Pages\StudentDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Student\Pages\StudentUpdate.xaml">
+    <Page Update="Views\StudentViews\Pages\StudentUpdate.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Student\Pages\StudentMain.xaml">
+    <Page Update="Views\StudentViews\Pages\StudentMain.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\Pages\TeacherUpdate.xaml">
+    <Page Update="Views\TeacherViews\Pages\TeacherUpdate.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\Pages\TeacherMain.xaml">
+    <Page Update="Views\TeacherViews\Pages\TeacherMain.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\Pages\TeacherDetails.xaml">
+    <Page Update="Views\TeacherViews\Pages\TeacherDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\Pages\TeaSortOptions.xaml">
+    <Page Update="Views\TeacherViews\Pages\TeaSortOptions.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\Pages\TeaUpdateSubjects.xaml">
+    <Page Update="Views\TeacherViews\Pages\TeaUpdateSubjects.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Teacher\Pages\TeaUpdGroups.xaml">
+    <Page Update="Views\TeacherViews\Pages\TeaUpdGroups.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Upd_Del_Window.xaml">
