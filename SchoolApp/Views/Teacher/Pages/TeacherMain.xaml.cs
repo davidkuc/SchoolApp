@@ -1,4 +1,6 @@
-﻿using SchoolApp.Views.Pages;
+﻿using SchoolApp.Views.Accounts;
+using SchoolApp.Views.Pages;
+using SchoolApp.Views.Student;
 using SchoolApp.Views.Teacher.Pages;
 using SchoolApp.Views.Teacher.Windows;
 using System;
@@ -42,12 +44,12 @@ namespace SchoolApp.Views.Teacher
 
         private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow);
+            _mainWindow.Content = new StudentMain(_mainWindow);
         }
 
         private void Accounts_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow);
+            _mainWindow.Content = new AccountsMainPage(_mainWindow);
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)

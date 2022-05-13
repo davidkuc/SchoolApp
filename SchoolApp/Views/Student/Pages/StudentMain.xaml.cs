@@ -66,7 +66,9 @@ namespace SchoolApp.Views.Student
 
         private void StudSortOptions_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow);
+            var sortOptionsWindow = new SortOptionsWindow();
+           sortOptionsWindow.Content = new StudSortOptions(sortOptionsWindow, this);
+            sortOptionsWindow.Show();
         }
 
         private void PrevPage_Button_Click(object sender, RoutedEventArgs e)

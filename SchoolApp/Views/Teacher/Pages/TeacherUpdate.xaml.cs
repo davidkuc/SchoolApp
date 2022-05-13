@@ -33,12 +33,14 @@ namespace SchoolApp.Views.Teacher.Pages
 
         private void Delete_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //
+            _updDelWindow.Content = _teaDet;
         }
 
         private void Update_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //
+            _updDelWindow.Content = _teaDet;
         }
 
         private void EditGroups_Button_Click(object sender, RoutedEventArgs e)

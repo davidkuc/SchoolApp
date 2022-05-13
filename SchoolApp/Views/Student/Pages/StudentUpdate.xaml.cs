@@ -32,12 +32,13 @@ namespace SchoolApp.Views.Student.Pages
 
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //
+            _updDelWindow.Content = _studDet;
         }
 
         private void EditGroups_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            _updDelWindow.Content = new StudUpdGroups(_updDelWindow, this); ;
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)

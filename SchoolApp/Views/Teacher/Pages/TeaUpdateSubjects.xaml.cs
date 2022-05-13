@@ -32,7 +32,8 @@ namespace SchoolApp.Views.Teacher.Pages
 
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //
+            _updDelWindow.Content = _teaUpd;
         }
 
         private void AddSubject_Button_Click(object sender, RoutedEventArgs e)

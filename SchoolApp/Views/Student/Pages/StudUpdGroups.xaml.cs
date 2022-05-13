@@ -37,7 +37,8 @@ namespace SchoolApp.Views.Student.Pages
 
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //
+            _updDelWindow.Content = _studUpd;
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)

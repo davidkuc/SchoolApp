@@ -33,7 +33,8 @@ namespace SchoolApp.Views.Accounts
 
         private void Confirm_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //
+            _updDelWindow.Content = _accDet;
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)

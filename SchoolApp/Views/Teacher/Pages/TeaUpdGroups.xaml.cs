@@ -32,7 +32,8 @@ namespace SchoolApp.Views.Teacher.Pages
 
         private void Confirm_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //
+            _updDelWindow.Content = _teaUpd;
         }
 
         private void AddGroup_Button_Click(object sender, RoutedEventArgs e)
