@@ -1,5 +1,10 @@
-﻿using SchoolApp.Views;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SchoolApp.Views;
 using SchoolApp.Views.Pages;
+using SchoolApp_EFCore.Context;
+using SchoolApp_EFCore.Models;
+using SchoolApp_EFCore.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,12 +27,17 @@ namespace SchoolApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly RepoPack _repoPack;
+
+        public MainWindow(RepoPack repoPack)
         {
             InitializeComponent();
-            this.Content = new LoginPage(this);
+            _repoPack = repoPack;
+            this.Content = new LoginPage(this, _repoPack);
+
+
         }
 
-  
+
     }
 }

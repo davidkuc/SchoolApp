@@ -1,4 +1,5 @@
-﻿using SchoolApp.Views.Pages;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolApp.Views.Pages;
 using SchoolApp.Views.Student;
 using SchoolApp.Views.Teacher;
 using System;
@@ -24,10 +25,13 @@ namespace SchoolApp.Views.Accounts
     public partial class AccountsMainPage : Page
     {
         private readonly MainWindow _mainWindow;
-        public AccountsMainPage(MainWindow mainWindow)
+        private readonly DbContext _dbContext;
+
+        public AccountsMainPage(MainWindow mainWindow, DbContext dbContext)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            _dbContext = dbContext;
         }
 
         private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -37,22 +41,22 @@ namespace SchoolApp.Views.Accounts
 
         private void Home_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow);
+            _mainWindow.Content = new MainMenuPage(_mainWindow, _dbContext);
         }
 
         private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new StudentMain(_mainWindow);
+            _mainWindow.Content = new StudentMain(_mainWindow, _dbContext);
         }
 
         private void Teachers_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new TeacherMain(_mainWindow);
+            _mainWindow.Content = new TeacherMain(_mainWindow, _dbContext);
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new LoginPage(_mainWindow);
+            _mainWindow.Content = new LoginPage(_mainWindow, _dbContext);
         }
 
         private void SortOptions_Button_Click(object sender, RoutedEventArgs e)

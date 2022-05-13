@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp.Models
+namespace SchoolApp_EFCore.Models
 {
-    public interface IEntity
+    public class Teacher : IEntity
     {
         public int ID { get; set; }
     }
-
-
 }

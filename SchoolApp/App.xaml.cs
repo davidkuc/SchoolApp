@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using SchoolApp_EFCore.Context;
+using SchoolApp_EFCore.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +16,27 @@ namespace SchoolApp
     /// </summary>
     public partial class App : Application
     {
+        private ServiceProvider serviceProvider;
+        public App()
+        {
+            ServiceCollection services = new ServiceCollection();
+            ConfigureServices(services);
+            serviceProvider = services.BuildServiceProvider();
+        }
+
+        private void ConfigureServices(ServiceCollection services)
+        {
+            services.AddDbContext<InMemoryDbContext>();
+            services.AddSingleton<MainWindow>();
+            services.AddSingleton<AccRepository>();
+            services.AddSingleton<TeaRepository>();
+            services.AddSingleton<StudRepository>();
+            services.AddSingleton<RepoPack>();
+        }
+        private void OnStartup(object sender, StartupEventArgs e)
+        {
+            var mainWindow = serviceProvider.GetService<MainWindow>();
+            mainWindow.Show();
+        }
     }
 }

@@ -1,7 +1,9 @@
-﻿using SchoolApp.Views.Accounts;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolApp.Views.Accounts;
 using SchoolApp.Views.Pages;
 using SchoolApp.Views.Student.Pages;
 using SchoolApp.Views.Teacher;
+using SchoolApp_EFCore.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,11 +27,13 @@ namespace SchoolApp.Views.Student
     public partial class StudentMain : Page
     {
         private readonly MainWindow _mainWindow;
+        private readonly StudRepository _studRepo;
 
-        public StudentMain(MainWindow mainWindow)
+        public StudentMain(MainWindow mainWindow, StudRepository studRepo)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            _studRepo = studRepo;
         }
 
         private void StudentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -39,22 +43,22 @@ namespace SchoolApp.Views.Student
 
         private void Home_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow);
+            _mainWindow.Content = new MainMenuPage(_mainWindow, _dbContext);
         }
 
         private void Teacher_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new TeacherMain(_mainWindow);
+            _mainWindow.Content = new TeacherMain(_mainWindow, _dbContext);
         }
 
         private void Accounts_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new AccountsMainPage(_mainWindow);
+            _mainWindow.Content = new AccountsMainPage(_mainWindow, _dbContext);
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new LoginPage(_mainWindow);
+            _mainWindow.Content = new LoginPage(_mainWindow, _dbContext);
         }
 
         private void StudDetails_Button_Click(object sender, RoutedEventArgs e)

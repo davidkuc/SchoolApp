@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolApp_EFCore.Models;
+using SchoolApp_EFCore.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,16 +24,29 @@ namespace SchoolApp.Views.Pages
     public partial class LoginPage : Page
     {
         private readonly MainWindow _mainWindow;
+        private readonly RepoPack _repoPack;
 
-        public LoginPage(MainWindow mainWindow)
+        public string Username { get; set; }
+        public string Password { get; set; }
+
+        private Account Account { get; set; }
+
+        public LoginPage(MainWindow mainWindow, RepoPack repoPack)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            _repoPack = repoPack;
         }
 
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow);
+            var validCreds = CheckCredentials();
+            _mainWindow.Content = new MainMenuPage(_mainWindow, _repoPack);
+        }
+
+        private bool CheckCredentials()
+        {
+            var userName =  
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using SchoolApp.Views.Accounts;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolApp.Views.Accounts;
 using SchoolApp.Views.Student;
 using SchoolApp.Views.Teacher;
+using SchoolApp_EFCore.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,31 +26,41 @@ namespace SchoolApp.Views.Pages
     public partial class MainMenuPage : Page
     {
         private readonly MainWindow _mainWindow;
+        private readonly AccRepository _accRepo;
+        private readonly TeaRepository _teaRepo;
+       private readonly StudRepository _studRepo;
 
-        public MainMenuPage(MainWindow mainWindow)
+        public MainMenuPage(MainWindow mainWindow,
+             AccRepository accRepo,
+            TeaRepository teaRepo,
+            StudRepository studRepo
+)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            _accRepo = accRepo;
+            _teaRepo = teaRepo;
+            _studRepo = studRepo;
         }
 
         private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new StudentMain(_mainWindow);
+            _mainWindow.Content = new StudentMain(_mainWindow, _studRepo);
         }
 
         private void Teachers_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new TeacherMain(_mainWindow);
+            _mainWindow.Content = new TeacherMain(_mainWindow, _TeaRepo);
         }
 
         private void Accounts_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new AccountsMainPage(_mainWindow);
+            _mainWindow.Content = new AccountsMainPage(_mainWindow, _AccRepo);
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new LoginPage(_mainWindow);
+            _mainWindow.Content = new LoginPage(_mainWindow, _accRepo, _teaRepo, _studRepo);
         }
     }
 }

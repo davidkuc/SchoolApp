@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolApp.Models
+namespace SchoolApp_EFCore.Models
 {
-    public class Student : IEntity
+    public interface IEntity
     {
         public int ID { get; set; }
-
-        public string Name { get; set; }
-
-        public string Course { get; set; }
     }
+
+
 }
