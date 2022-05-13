@@ -28,12 +28,14 @@ namespace SchoolApp.Views.Student
     {
         private readonly MainWindow _mainWindow;
         private readonly RepoPack _repoPack;
+        private readonly List<Student> _students;
 
         public StudentMain(MainWindow mainWindow, RepoPack repoPack)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
             _repoPack = repoPack;
+
         }
 
         private void StudentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
