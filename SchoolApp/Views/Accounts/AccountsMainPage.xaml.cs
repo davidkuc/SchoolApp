@@ -2,6 +2,7 @@
 using SchoolApp.Views.Pages;
 using SchoolApp.Views.Student;
 using SchoolApp.Views.Teacher;
+using SchoolApp_EFCore.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,13 +26,13 @@ namespace SchoolApp.Views.Accounts
     public partial class AccountsMainPage : Page
     {
         private readonly MainWindow _mainWindow;
-        private readonly DbContext _dbContext;
+        private readonly RepoPack _repoPack;
 
-        public AccountsMainPage(MainWindow mainWindow, DbContext dbContext)
+        public AccountsMainPage(MainWindow mainWindow, RepoPack repoPack)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
-            _dbContext = dbContext;
+            _repoPack = repoPack;
         }
 
         private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -41,22 +42,22 @@ namespace SchoolApp.Views.Accounts
 
         private void Home_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow, _dbContext);
+            _mainWindow.Content = new MainMenuPage(_mainWindow, _repoPack);
         }
 
         private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new StudentMain(_mainWindow, _dbContext);
+            _mainWindow.Content = new StudentMain(_mainWindow, _repoPack);
         }
 
         private void Teachers_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new TeacherMain(_mainWindow, _dbContext);
+            _mainWindow.Content = new TeacherMain(_mainWindow, _repoPack);
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new LoginPage(_mainWindow, _dbContext);
+            _mainWindow.Content = new LoginPage(_mainWindow, _repoPack);
         }
 
         private void SortOptions_Button_Click(object sender, RoutedEventArgs e)

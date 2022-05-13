@@ -34,8 +34,6 @@ namespace SchoolApp
             InitializeComponent();
             _repoPack = repoPack;
             this.Content = new LoginPage(this, _repoPack);
-
-
         }
 
 

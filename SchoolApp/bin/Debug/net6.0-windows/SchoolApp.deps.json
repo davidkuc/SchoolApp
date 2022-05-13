@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.5",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "SchoolApp_EFCore": "1.0.0"
         },
         "runtime": {

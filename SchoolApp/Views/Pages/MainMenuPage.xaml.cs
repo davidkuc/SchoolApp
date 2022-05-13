@@ -26,41 +26,33 @@ namespace SchoolApp.Views.Pages
     public partial class MainMenuPage : Page
     {
         private readonly MainWindow _mainWindow;
-        private readonly AccRepository _accRepo;
-        private readonly TeaRepository _teaRepo;
-       private readonly StudRepository _studRepo;
+        private readonly RepoPack _repoPack;
 
-        public MainMenuPage(MainWindow mainWindow,
-             AccRepository accRepo,
-            TeaRepository teaRepo,
-            StudRepository studRepo
-)
+        public MainMenuPage(MainWindow mainWindow, RepoPack repoPack)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
-            _accRepo = accRepo;
-            _teaRepo = teaRepo;
-            _studRepo = studRepo;
+            _repoPack = repoPack;
         }
 
         private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new StudentMain(_mainWindow, _studRepo);
+            _mainWindow.Content = new StudentMain(_mainWindow, _repoPack);
         }
 
         private void Teachers_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new TeacherMain(_mainWindow, _TeaRepo);
+            _mainWindow.Content = new TeacherMain(_mainWindow, _repoPack);
         }
 
         private void Accounts_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new AccountsMainPage(_mainWindow, _AccRepo);
+            _mainWindow.Content = new AccountsMainPage(_mainWindow, _repoPack);
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new LoginPage(_mainWindow, _accRepo, _teaRepo, _studRepo);
+            _mainWindow.Content = new LoginPage(_mainWindow, _repoPack);
         }
     }
 }

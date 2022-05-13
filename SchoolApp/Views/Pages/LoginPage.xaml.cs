@@ -40,13 +40,14 @@ namespace SchoolApp.Views.Pages
 
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
-            var validCreds = CheckCredentials();
+            var account = _repoPack.AccRepo.FindAccount(Username,Password);
+            if (account == null)
+            {
+                MessageBox.Show("Invalid credentials - account not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             _mainWindow.Content = new MainMenuPage(_mainWindow, _repoPack);
         }
 
-        private bool CheckCredentials()
-        {
-            var userName =  
-        }
+    
     }
 }

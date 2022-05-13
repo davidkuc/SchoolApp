@@ -14,5 +14,10 @@ namespace SchoolApp_EFCore.Repositories
         {
 
         }
+
+        public Account? FindAccount(string username, string password)
+        {
+            return _dbSet.SingleOrDefault(x => x.UserName == username && x.Password == password, null);
+        }
     }
 }

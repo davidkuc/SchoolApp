@@ -4,6 +4,7 @@ using SchoolApp.Views.Pages;
 using SchoolApp.Views.Student;
 using SchoolApp.Views.Teacher.Pages;
 using SchoolApp.Views.Teacher.Windows;
+using SchoolApp_EFCore.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,13 +28,14 @@ namespace SchoolApp.Views.Teacher
     public partial class TeacherMain : Page
     {
         private readonly MainWindow _mainWindow;
-        private readonly DbContext _dbContext;
+        private readonly RepoPack _repoPack;
 
-        public TeacherMain(MainWindow window, DbContext dbContext)
+        public TeacherMain(MainWindow window, RepoPack repoPack)
         {
             InitializeComponent();
             _mainWindow = window;
-            _dbContext = dbContext;
+            _repoPack = repoPack;
+
         }
 
         private void TeacherList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -43,22 +45,22 @@ namespace SchoolApp.Views.Teacher
 
         private void Home_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow, _dbContext);
+            _mainWindow.Content = new MainMenuPage(_mainWindow, _repoPack);
         }
 
         private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new StudentMain(_mainWindow, _dbContext);
+            _mainWindow.Content = new StudentMain(_mainWindow, _repoPack);
         }
 
         private void Accounts_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new AccountsMainPage(_mainWindow, _dbContext);
+            _mainWindow.Content = new AccountsMainPage(_mainWindow, _repoPack);
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new LoginPage(_mainWindow, _dbContext);
+            _mainWindow.Content = new LoginPage(_mainWindow, _repoPack);
         }
 
         private void SortOptions_Button_Click(object sender, RoutedEventArgs e)

@@ -27,13 +27,13 @@ namespace SchoolApp.Views.Student
     public partial class StudentMain : Page
     {
         private readonly MainWindow _mainWindow;
-        private readonly StudRepository _studRepo;
+        private readonly RepoPack _repoPack;
 
-        public StudentMain(MainWindow mainWindow, StudRepository studRepo)
+        public StudentMain(MainWindow mainWindow, RepoPack repoPack)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
-            _studRepo = studRepo;
+            _repoPack = repoPack;
         }
 
         private void StudentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -43,22 +43,22 @@ namespace SchoolApp.Views.Student
 
         private void Home_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MainMenuPage(_mainWindow, _dbContext);
+            _mainWindow.Content = new MainMenuPage(_mainWindow, _repoPack);
         }
 
         private void Teacher_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new TeacherMain(_mainWindow, _dbContext);
+            _mainWindow.Content = new TeacherMain(_mainWindow, _repoPack);
         }
 
         private void Accounts_Nav_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new AccountsMainPage(_mainWindow, _dbContext);
+            _mainWindow.Content = new AccountsMainPage(_mainWindow, _repoPack);
         }
 
         private void Logout_Button_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new LoginPage(_mainWindow, _dbContext);
+            _mainWindow.Content = new LoginPage(_mainWindow, _repoPack);
         }
 
         private void StudDetails_Button_Click(object sender, RoutedEventArgs e)
