@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp2.Enums
 {
-    public enum Subject
+    public enum SubjectEnum
     {
         Math,
         Algorithms,

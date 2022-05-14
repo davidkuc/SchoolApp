@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace SchoolApp2.Enums
 {
-    public enum Group
+    public enum CourseEnum
     {
-        Ex1F,
-        Ex2F,
-        Ex3F,
-        Lect1F,
-        Lect2F,
-        Lect3F,
+        Computer_Science,
+        Management,
+        Economy
     }
 }

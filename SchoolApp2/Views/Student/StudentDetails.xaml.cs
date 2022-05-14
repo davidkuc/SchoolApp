@@ -60,7 +60,7 @@ namespace SchoolApp2.Views.Student
 
         private void UpdateStud_Button_Click(object sender, RoutedEventArgs e)
         {
-            _updDelWindow.Content = new StudentUpdate(_updDelWindow, this);
+            _updDelWindow.Content = new StudentUpdate(_updDelWindow, this,  _stud, _repoPack);
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)
