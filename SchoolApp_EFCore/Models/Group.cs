@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace SchoolApp_EFCore.Models
 {
-    public class Group
+    public class Group : IEntity
     {
         public string Code { get; set; }
 
         public string Subject { get; set; }
 
         public ICollection<StudentGroups> StudentGroups { get; set; }
+        public int ID { get; set ; }
     }
 }

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SchoolApp_EFCore.Context;
+using SchoolApp_EFCore.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;

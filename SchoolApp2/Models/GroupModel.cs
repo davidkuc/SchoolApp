@@ -12,6 +12,6 @@ namespace SchoolApp2.Models
         public string Name { get; set; }
         public ICollection<StudentModel> Students { get; set; }
 
-        public Subject Subject { get; set; }
+        public SubjectModel Subject { get; set; }
     }
 }

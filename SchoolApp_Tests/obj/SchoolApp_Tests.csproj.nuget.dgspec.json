@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DKUC\\source\\repos\\SchoolApp2\\SchoolApp_Tests\\SchoolApp_Tests.csproj": {}
+    "C:\\Users\\DKUC\\source\\repos\\SchoolApp\\SchoolApp_Tests\\SchoolApp_Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DKUC\\source\\repos\\SchoolApp2\\SchoolApp_Tests\\SchoolApp_Tests.csproj": {
+    "C:\\Users\\DKUC\\source\\repos\\SchoolApp\\SchoolApp_Tests\\SchoolApp_Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DKUC\\source\\repos\\SchoolApp2\\SchoolApp_Tests\\SchoolApp_Tests.csproj",
+        "projectUniqueName": "C:\\Users\\DKUC\\source\\repos\\SchoolApp\\SchoolApp_Tests\\SchoolApp_Tests.csproj",
         "projectName": "SchoolApp_Tests",
-        "projectPath": "C:\\Users\\DKUC\\source\\repos\\SchoolApp2\\SchoolApp_Tests\\SchoolApp_Tests.csproj",
+        "projectPath": "C:\\Users\\DKUC\\source\\repos\\SchoolApp\\SchoolApp_Tests\\SchoolApp_Tests.csproj",
         "packagesPath": "C:\\Users\\DKUC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DKUC\\source\\repos\\SchoolApp2\\SchoolApp_Tests\\obj\\",
+        "outputPath": "C:\\Users\\DKUC\\source\\repos\\SchoolApp\\SchoolApp_Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

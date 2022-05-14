@@ -1,4 +1,9 @@
-﻿using System;
+﻿using SchoolApp_EFCore.Repositories;
+using SchoolApp2.Views.Account;
+using SchoolApp2.Views.Shared;
+using SchoolApp2.Views.Shared.Pages;
+using SchoolApp2.Views.Student;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

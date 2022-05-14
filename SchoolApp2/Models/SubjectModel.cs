@@ -15,4 +15,4 @@ namespace SchoolApp2.Models
         public int ID { get; set; }
     }
 }
-}
+

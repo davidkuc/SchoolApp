@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolApp_EFCore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +22,7 @@ namespace SchoolApp_EFCore.Context
 
         public InMemoryDbContext()
         {
-
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -35,6 +37,7 @@ namespace SchoolApp_EFCore.Context
             modelBuilder.Entity<TeacherGroups>().HasKey(ck => new { ck.TeacherId, ck.GroupId });
 
             modelBuilder.Entity<Account>().HasData(new Account { ID = 1, Username = "admin", Password = "admin", Name = "Krul", Surname = "Bazy", HasAdminPrivileges = true });
+
         }
 
     }

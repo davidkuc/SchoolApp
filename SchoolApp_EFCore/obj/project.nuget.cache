@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/gMIkljrpNNEKE9Hb/mUupHQXV+U9JSBzmnxsSAhGu394ucoytvBX2J46oWZ5+b8DBIxJD+7lDFmhvSg2eQV9g==",
+  "dgSpecHash": "Q7BKTqs4Om/q8fYz0B1IH1uwJ+kHnuWB/d6t3ewh3VsVTfprKhPu8FvcaTSZsUmIokaqLWIHHKrjfkYPAFRQww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DKUC\\source\\repos\\SchoolApp2\\SchoolApp_EFCore\\SchoolApp_EFCore.csproj",
+  "projectFilePath": "C:\\Users\\DKUC\\source\\repos\\SchoolApp\\SchoolApp_EFCore\\SchoolApp_EFCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DKUC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\DKUC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

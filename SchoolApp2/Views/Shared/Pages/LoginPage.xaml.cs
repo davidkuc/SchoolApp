@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SchoolApp_EFCore.Repositories;
+using SchoolApp2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,7 +61,8 @@ namespace SchoolApp2.Views.Shared.Pages
                     MessageBox.Show("Invalid credentials - account not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                AccountHolder = new AccountHolder(account);
+                var accountModel = new AccountModel() { ID = account.ID };
+                AccountHolder = new AccountHolder(accountModel);
                 _mainWindow.Content = new MainMenuPage(_mainWindow, _repoPack);
             }
             catch (Exception)
