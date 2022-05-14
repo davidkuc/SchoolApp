@@ -1,5 +1,6 @@
 ﻿using SchoolApp_EFCore.Repositories;
 using SchoolApp_EFCore.Models;
+using EFStudent = SchoolApp_EFCore.Models.Student;
 using SchoolApp2.Models;
 using SchoolApp2.Views.Account;
 using SchoolApp2.Views.Shared;
@@ -29,9 +30,20 @@ namespace SchoolApp2.Views.Student
     {
         private readonly MainWindow _mainWindow;
         private readonly RepoPack _repoPack;
-        private readonly List<SchoolApp_EFCore.Models.Student> _students;
+        private List<EFStudent> _students;
+        private EFStudent _selectedStud;
 
-        public List<SchoolApp_EFCore.Models.Student> Students => _students;
+        public List<EFStudent> Students => _students;
+
+        public EFStudent SelectedStudent
+        {
+            get
+            { return _selectedStud; }
+            set
+            {
+                _selectedStud = value;
+            }
+        }
 
         public StudentMain(MainWindow mainWindow, RepoPack repoPack)
         {
@@ -39,13 +51,15 @@ namespace SchoolApp2.Views.Student
             _mainWindow = mainWindow;
             _mainWindow.DataContext = this;
             _repoPack = repoPack;
-            _students = (List<SchoolApp_EFCore.Models.Student>?)_repoPack.StudRepo.GetAll();
+            _students = (List<EFStudent>?)_repoPack.StudRepo.GetAll();
 
         }
 
         private void StudentList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var listbox = (ListBox)sender;
+            var item = (EFStudent)listbox.SelectedItem;
+            _selectedStud = item;
         }
 
         private void Home_Nav_Button_Click(object sender, RoutedEventArgs e)
@@ -71,7 +85,7 @@ namespace SchoolApp2.Views.Student
         private void StudDetails_Button_Click(object sender, RoutedEventArgs e)
         {
             var updDelWindow = new Upd_Del_Window();
-            updDelWindow.Content = new StudentDetails(updDelWindow, this);
+            updDelWindow.Content = new StudentDetails(updDelWindow, this, _selectedStud);
             updDelWindow.Show();
         }
 

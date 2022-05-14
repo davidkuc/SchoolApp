@@ -52,15 +52,15 @@ namespace SchoolApp2.Views.Shared.Pages
         {
             try
             {
-                var accs = _repoPack.AccRepo.GetAll();
-                var account = _repoPack.AccRepo.FindAccount(Username, Password);
-                if (account == null)
-                {
-                    MessageBox.Show("Invalid credentials - account not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-                var accountModel = new AccountModel() { ID = account.ID };
-                AccountHolder = new AccountHolder(accountModel);
+                //var accs = _repoPack.AccRepo.GetAll();
+                //var account = _repoPack.AccRepo.FindAccount(Username, Password);
+                //if (account == null)
+                //{
+                //    MessageBox.Show("Invalid credentials - account not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                //    return;
+                //}
+                //var accountModel = new AccountModel() { ID = account.ID };
+                //AccountHolder = new AccountHolder(accountModel);
                 _mainWindow.Content = new MainMenuPage(_mainWindow, _repoPack);
             }
             catch (Exception)

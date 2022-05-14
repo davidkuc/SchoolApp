@@ -42,7 +42,7 @@
                 <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Name</TextBlock>
                 <TextBlock Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Name}"></TextBlock>
+                           VerticalAlignment="Center" Text="{Binding SName}"></TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Surname</TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="1" 
