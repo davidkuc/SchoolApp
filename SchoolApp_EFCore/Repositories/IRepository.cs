@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp_EFCore.Repositories
 {
-    public interface IRepository<T> where T : class, IEntity
+    public interface IRepository<T> where T : class
     {
         void Add(T item);
 

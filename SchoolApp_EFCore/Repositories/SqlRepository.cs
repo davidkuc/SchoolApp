@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp_EFCore.Repositories
 {
-    public class SqlRepository<T> : IRepository<T> where T : class, IEntity
+    public class SqlRepository<T> : IRepository<T> where T : class
     {
         protected readonly DbSet<T> _dbSet;
         protected readonly DbContext _dbContext;

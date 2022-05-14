@@ -13,6 +13,7 @@ namespace SchoolApp_EFCore.Repositories
         private readonly StudRepository _studRepo;
         private readonly GruRepository _gruRepo;
         private readonly SubjRepository _subjRepo;
+        private readonly GruStudRepository _gruStudRepo;
 
         public AccRepository AccRepo => _accRepo;
         public TeaRepository TeaRepo => _teaRepo;
@@ -24,13 +25,15 @@ namespace SchoolApp_EFCore.Repositories
                         TeaRepository teaRepo,
                         StudRepository studRepo,
                         GruRepository gruRepo,
-                         SubjRepository subjRepo)
+                         SubjRepository subjRepo,
+                          GruStudRepository gruStudRepo)
         {
             _accRepo = accRepo;
             _teaRepo = teaRepo;
             _studRepo = studRepo;
             _gruRepo = gruRepo;
             _subjRepo = subjRepo;
+            _gruStudRepo = gruStudRepo;
         }
     }
 }

@@ -85,9 +85,23 @@
                           >Code</TextBlock>
                 </Grid>
 
-                <ListView Name="StudentGroups" Grid.Row="2">
-
-                </ListView>
+                <ListBox Name="StudentGroups" HorizontalContentAlignment="Stretch" 
+                         SelectionMode="Extended" 
+                         SelectionChanged="StudentGroups_SelectionChanged"
+                         Grid.ColumnSpan="6" ItemsSource="{Binding Groups}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding ActivityForm}" />
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding Code}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
 
                 <Button Name="UpdGroups_Del_Button" Grid.Row="3" 
                         Height="30" Width="110" Background="OrangeRed"
