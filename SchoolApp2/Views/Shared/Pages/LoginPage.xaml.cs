@@ -52,8 +52,6 @@ namespace SchoolApp2.Views.Shared.Pages
         {
             try
             {
-                //_repoPack.AccRepo.Add(new Account() { Username = "admin", Password = "admin", Name = "Krul", Surname = "Bazy", HasAdminPrivileges = true });
-                //_repoPack.AccRepo.Save();
                 var accs = _repoPack.AccRepo.GetAll();
                 var account = _repoPack.AccRepo.FindAccount(Username, Password);
                 if (account == null)

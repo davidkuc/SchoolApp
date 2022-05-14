@@ -1,4 +1,5 @@
 ﻿using SchoolApp_EFCore.Repositories;
+using SchoolApp_EFCore.Models;
 using SchoolApp2.Models;
 using SchoolApp2.Views.Account;
 using SchoolApp2.Views.Shared;
@@ -28,13 +29,17 @@ namespace SchoolApp2.Views.Student
     {
         private readonly MainWindow _mainWindow;
         private readonly RepoPack _repoPack;
-        private readonly List<StudentModel> _students;
+        private readonly List<SchoolApp_EFCore.Models.Student> _students;
+
+        public List<SchoolApp_EFCore.Models.Student> Students => _students;
 
         public StudentMain(MainWindow mainWindow, RepoPack repoPack)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            _mainWindow.DataContext = this;
             _repoPack = repoPack;
+            _students = (List<SchoolApp_EFCore.Models.Student>?)_repoPack.StudRepo.GetAll();
 
         }
 

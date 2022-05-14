@@ -88,7 +88,7 @@
                 <ListBox Name="StudentList" HorizontalContentAlignment="Stretch" 
                          SelectionMode="Extended" 
                          SelectionChanged="StudentList_SelectionChanged"
-                         Grid.ColumnSpan="6">
+                         Grid.ColumnSpan="6" ItemsSource="{Binding Students}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid Margin="5">
@@ -99,7 +99,7 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding ID}" />
                                 <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding Name}" />
-                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding Course}" />
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding CourseName}" />
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

@@ -12,6 +12,8 @@ namespace SchoolApp_EFCore.Models
 
         public string Name { get; set; }
 
+        public string Surname { get; set; }
+
         public string CourseName { get; set; }
 
         public int CourseID { get; set; }
