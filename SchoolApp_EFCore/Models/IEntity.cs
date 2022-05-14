@@ -8,6 +8,6 @@ namespace SchoolApp_EFCore.Models
 {
     public interface IEntity
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
     }
 }

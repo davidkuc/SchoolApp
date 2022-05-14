@@ -97,7 +97,21 @@
                           >Code</TextBlock>
                 </Grid>
 
-                <ListView Grid.Row="2"></ListView>
+                <ListView Name="StudGroups" ItemsSource="{Binding Groups}" Grid.Row="2"
+                          Grid.ColumnSpan="6" HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding ActivityForm}" />
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding SCode}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListView>
 
 
             </Grid>

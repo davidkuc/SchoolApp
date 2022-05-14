@@ -8,16 +8,10 @@ using System.Threading.Tasks;
 
 namespace SchoolApp_EFCore.Repositories
 {
-    public class StudRepository : SqlRepository<Student>
+    public class GruRepository : SqlRepository<Group>
     {
-        public StudRepository(DbContext dbContext) : base(dbContext)
+        public GruRepository(DbContext dbContext) : base(dbContext)
         {
         }
-
-        public override IEnumerable<Student> GetAll()
-        {
-            return _dbSet.Include(x => x.Groups).ToList();
-        }
-
     }
 }

@@ -8,11 +8,14 @@ namespace SchoolApp_EFCore.Models
 {
     public class Group : IEntity
     {
-        public string Code { get; set; }
+        public string SCode { get; set; }
 
-        public string Subject { get; set; }
+        public string ActivityForm { get; set; }
 
-        public ICollection<StudentGroups> StudentGroups { get; set; }
-        public int ID { get; set ; }
+        public ICollection<Student> Students{ get; set; }
+
+        public List<GroupStudent> StudentGroups { get; set; }
+
+        public string ID { get; set ; }
     }
 }

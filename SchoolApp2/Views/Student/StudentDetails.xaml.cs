@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SchoolApp_EFCore.Models;
+using SchoolApp_EFCore.Repositories;
 
 namespace SchoolApp2.Views.Student
 {
@@ -26,7 +27,7 @@ namespace SchoolApp2.Views.Student
         private readonly Upd_Del_Window _updDelWindow;
         private readonly StudentMain _studMain;
         private readonly EFStudent _stud;
-        private List<Group> _groups;
+        private readonly RepoPack _repoPack;
 
         public string SName => _stud.Name;
 
@@ -38,14 +39,15 @@ namespace SchoolApp2.Views.Student
 
         public string Course => _stud.CourseName;
 
-        public List<Group> Groups => _groups;
+        public ICollection<Group> Groups => _stud.Groups;
 
-        public StudentDetails(Upd_Del_Window updDelWindow, StudentMain studMain, EFStudent stud)
+        public StudentDetails(Upd_Del_Window updDelWindow, StudentMain studMain, EFStudent stud, RepoPack repoPack)
         {
             InitializeComponent();
             _updDelWindow = updDelWindow;
             _studMain = studMain;
             _stud = stud;
+            _repoPack = repoPack;
             _updDelWindow.Content = this;
             _updDelWindow.DataContext = this;
             _updDelWindow.Show();

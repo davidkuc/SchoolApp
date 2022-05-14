@@ -12,6 +12,6 @@ namespace SchoolApp_EFCore.Models
 
         public string ActivityForm { get; set; }
 
-        public int ID { get; set; }
+        public string ID { get; set; }
     }
 }

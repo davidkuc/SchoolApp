@@ -8,7 +8,7 @@ namespace SchoolApp_EFCore.Models
 {
     public class Teacher : IEntity
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
 
         public string Name { get; set; }
 

@@ -85,7 +85,7 @@ namespace SchoolApp2.Views.Student
         private void StudDetails_Button_Click(object sender, RoutedEventArgs e)
         {
             var updDelWindow = new Upd_Del_Window();
-            updDelWindow.Content = new StudentDetails(updDelWindow, this, _selectedStud);
+            updDelWindow.Content = new StudentDetails(updDelWindow, this, _selectedStud, _repoPack);
             updDelWindow.Show();
         }
 
