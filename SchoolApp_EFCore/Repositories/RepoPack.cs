@@ -20,9 +20,9 @@ namespace SchoolApp_EFCore.Repositories
                         TeaRepository teaRepo,
                         StudRepository studRepo)
         {
-           _accRepo = accRepo;
-           _teaRepo = teaRepo;
-           _studRepo = studRepo;
+            _accRepo = accRepo;
+            _teaRepo = teaRepo;
+            _studRepo = studRepo;
         }
     }
 }

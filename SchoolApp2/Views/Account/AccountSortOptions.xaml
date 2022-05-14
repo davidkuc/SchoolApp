@@ -1,0 +1,47 @@
+﻿<Page x:Class="SchoolApp2.Views.Account.AccountSortOptions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchoolApp2.Views.Account"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="AccountSortOptions">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderBrush="DarkGray" 
+                BorderThickness="3" Background="Beige"></Border>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="35" >Sort Options</TextBlock>
+
+
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" 
+                   VerticalAlignment="Top"
+                   FontSize="15" Margin="0 20 0 0">Criteria</TextBlock>
+        <ComboBox VerticalAlignment="Bottom" Name="Criteria_ComboBox"
+                  Width="110" Height="30" Grid.Row="1"></ComboBox>
+
+
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" 
+                   VerticalAlignment="Top"
+                   FontSize="15" Margin="0 20 0 0">Order</TextBlock>
+        <ComboBox VerticalAlignment="Bottom" Name="Asc_Desc_ComboBox"
+                  Width="110" Height="30" Grid.Row="2"></ComboBox>
+
+        <Button Grid.Row="3" Width="70" Height="30" 
+                HorizontalAlignment="Left" Margin="30 0 0 0"
+                Name="GoBack_Button" Click="GoBack_Button_Click">Go back</Button>
+
+        <Button Grid.Row="3" Width="70" Height="30" 
+                HorizontalAlignment="Right" Margin="0 0 30 0"
+                Name="Submit_Button" Click="Submit_Button_Click">Submit</Button>
+    </Grid>
+</Page>

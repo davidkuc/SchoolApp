@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iEC0xPFJuU9ms3Dg5KXXF+g8X5ZfhhLBZMEzDgD/lryxouX921G566z5aIhHfnic8aVY+Y2xNEiKIk8Wx3BW5Q==",
+  "dgSpecHash": "jCht/6skPVlnuEbCtmh4jFUyBhZ2hxCgpYyVuOzfrt1sXbXLngkoul53KaJ/gpMB7ZtNW0FAatZDrnXXAn5EeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DKUC\\source\\repos\\SchoolApp\\SchoolApp_Tests\\SchoolApp_Tests.csproj",
+  "projectFilePath": "C:\\Users\\DKUC\\source\\repos\\SchoolApp2\\SchoolApp_Tests\\SchoolApp_Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DKUC\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\DKUC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

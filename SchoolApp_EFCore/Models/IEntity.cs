@@ -10,6 +10,4 @@ namespace SchoolApp_EFCore.Models
     {
         public int ID { get; set; }
     }
-
-
 }
