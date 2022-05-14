@@ -9,9 +9,15 @@ namespace SchoolApp2.Models
 
     public class GroupModel
     {
-        public string Name { get; set; }
-        public ICollection<StudentModel> Students { get; set; }
+        public string SCode { get; set; }
 
-        public SubjectModel Subject { get; set; }
+        public string ActivityForm { get; set; }
+
+        public string ID { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ActivityForm}/{SCode}";
+        }
     }
 }
