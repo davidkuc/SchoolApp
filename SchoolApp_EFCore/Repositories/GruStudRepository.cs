@@ -13,5 +13,10 @@ namespace SchoolApp_EFCore.Repositories
         public GruStudRepository(DbContext dbContext) : base(dbContext)
         {
         }
+
+        public GroupStudent? GetByKeys(string studID, string groupID)
+        {
+            return _dbSet.SingleOrDefault(x => x.StudentId == studID && x.GroupId == groupID, null);
+        }
     }
 }

@@ -21,6 +21,8 @@ namespace SchoolApp_EFCore.Repositories
         public GruRepository GruRepo => _gruRepo;
         public SubjRepository SubjRepo => _subjRepo;
 
+        public GruStudRepository GruStudRepo => _gruStudRepo;
+
         public RepoPack(AccRepository accRepo,
                         TeaRepository teaRepo,
                         StudRepository studRepo,

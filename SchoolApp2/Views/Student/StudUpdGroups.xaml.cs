@@ -49,7 +49,9 @@ namespace SchoolApp2.Views.Student
 
         private void UpdGroups_Del_Button_Click(object sender, RoutedEventArgs e)
         {
-
+           var groupStud = _repoPack.GruStudRepo.GetByKeys(_stud.ID, SelectedGroup.ID);
+            _repoPack.GruStudRepo.Remove(groupStud);
+            _repoPack.GruStudRepo.Save();
         }
 
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
