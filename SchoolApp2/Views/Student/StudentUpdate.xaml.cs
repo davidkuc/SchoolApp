@@ -93,7 +93,7 @@ namespace SchoolApp2.Views.Student
             DateOfBirth = _stud.DateOfBirth;
             Course = _stud.CourseName;
             Year = _stud.Year;
-            Groups = DataProvider.GetGroupModels(_stud);
+            Groups = DataProvider.GetStudentGroupModels(_stud);
         }
 
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)

@@ -96,15 +96,5 @@ namespace SchoolApp2.Views.Student
         }
 
 
-
-        private void PrevPage_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void NextPage_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

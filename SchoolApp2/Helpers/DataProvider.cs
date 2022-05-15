@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EFStudent = SchoolApp_EFCore.Models.Student;
+using EFTeacher = SchoolApp_EFCore.Models.Teacher;
 
 namespace SchoolApp2.Helpers
 {
@@ -27,10 +28,25 @@ namespace SchoolApp2.Helpers
             return groupsList;
         }
 
-        public static List<GroupModel> GetGroupModels(EFStudent stud)
+        public static List<GroupModel> GetStudentGroupModels(EFStudent stud)
         {
             var groups = new List<GroupModel>();
             foreach (var item in stud.Groups)
+            {
+                groups.Add(new GroupModel()
+                {
+                    SCode = item.SCode,
+                    ActivityForm = item.ActivityForm,
+                    ID = item.ID
+                });
+            }
+            return groups;
+        }
+
+        public static List<GroupModel> GetTeacherGroupModels(EFTeacher tea)
+        {
+            var groups = new List<GroupModel>();
+            foreach (var item in tea.Groups)
             {
                 groups.Add(new GroupModel()
                 {

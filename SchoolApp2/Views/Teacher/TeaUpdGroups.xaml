@@ -39,7 +39,7 @@
                 <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
+
                     </Grid.ColumnDefinitions>
 
                     <Grid.RowDefinitions>
@@ -49,11 +49,10 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Grid.Column="0" HorizontalAlignment="Center"
-                               VerticalAlignment="Bottom">Activity Form</TextBlock>
-                    <TextBlock Grid.Column="1" HorizontalAlignment="Center"
-                               VerticalAlignment="Bottom">Code</TextBlock>
-                    <ComboBox Grid.Column="0" Grid.Row="1" Height="30" Width="110"></ComboBox>
-                    <ComboBox Grid.Column="1" Grid.Row="1" Height="30" Width="110"></ComboBox>
+                               VerticalAlignment="Bottom">Group</TextBlock>
+                    <ComboBox Name="DBGroups_ComboBox" ItemsSource="{Binding DBGroups}" 
+                              Grid.Column="0" Grid.Row="1" Height="30" Width="110"></ComboBox>
+
 
                 </Grid>
                 <Button Name="AddGroup_Button" Click="AddGroup_Button_Click" Grid.Row="1" Height="30" Width="110">Add</Button>
@@ -85,9 +84,25 @@
                           >Code</TextBlock>
                 </Grid>
 
-                <ListView Name="TeacherGroups" Grid.Row="2">
 
-                </ListView>
+                <ListBox Grid.Row="2" Name="TeacherGroups" HorizontalContentAlignment="Stretch" 
+                         SelectionMode="Extended" 
+                         SelectionChanged="TeacherGroups_SelectionChanged"
+                         Grid.ColumnSpan="6" 
+                         ItemsSource="{Binding Groups, UpdateSourceTrigger=PropertyChanged}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding ActivityForm}" />
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding SCode}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
 
                 <Button Name="DeleteGroup_Button" Grid.Row="3" 
                         Height="30" Width="110" Background="OrangeRed"

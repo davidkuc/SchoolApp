@@ -57,7 +57,7 @@ namespace SchoolApp2.Views.Student
             _updDelWindow = updDelWindow;
             _studMain = studMain;
             _stud = stud;
-            _groups = DataProvider.GetGroupModels(_stud);
+            _groups = DataProvider.GetStudentGroupModels(_stud);
             _repoPack = repoPack;
             _updDelWindow.Content = this;
             _updDelWindow.DataContext = this;

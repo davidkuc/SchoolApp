@@ -12,9 +12,13 @@ namespace SchoolApp_EFCore.Models
 
         public string ActivityForm { get; set; }
 
-        public ICollection<Student> Students{ get; set; }
+        public ICollection<Student> Students { get; set; }
 
         public List<GroupStudent> StudentGroups { get; set; }
+
+        public ICollection<Teacher> Teachers { get; set; }
+
+        public List<GroupTeacher> TeacherGroups { get; set; }
 
         public string ID { get; set ; }
     }

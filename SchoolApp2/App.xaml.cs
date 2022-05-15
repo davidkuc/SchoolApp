@@ -36,6 +36,7 @@ namespace SchoolApp2
             services.AddSingleton<GruRepository>();
             services.AddSingleton<SubjRepository>();
             services.AddSingleton<GruStudRepository>();
+            services.AddSingleton<GruTeaRepository>();
 
         }
         private void OnStartup(object sender, StartupEventArgs e)

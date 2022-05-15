@@ -13,5 +13,8 @@ namespace SchoolApp_EFCore.Models
         public string Name { get; set; }
 
         public string Surname { get; set; }
+
+        public ICollection<Group> Groups { get; set; }
+        public List<GroupTeacher> TeacherGroups { get; set; }
     }
 }

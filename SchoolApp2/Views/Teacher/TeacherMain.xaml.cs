@@ -62,17 +62,6 @@ namespace SchoolApp2.Views.Teacher
         }
 
 
-
-        private void PrevPage_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void NextPage_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void TeacherDetails_Button_Click(object sender, RoutedEventArgs e)
         {
             var updDelWindow = new Upd_Del_Window();

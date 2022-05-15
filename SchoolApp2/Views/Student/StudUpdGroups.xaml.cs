@@ -57,7 +57,7 @@ namespace SchoolApp2.Views.Student
             InitializeComponent();
             _updDelWindow = updDelWindow;
             _stud = stud;
-            _groups = DataProvider.GetGroupModels(_stud);
+            _groups = DataProvider.GetStudentGroupModels(_stud);
             _repoPack = repoPack;
             _updDelWindow.Content = this;
             _updDelWindow.DataContext = this;
@@ -77,7 +77,6 @@ namespace SchoolApp2.Views.Student
 
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
         {
-            //
             var stud = _stud;
             _updDelWindow.DataContext = _studUpd;
             _studUpd.Groups = this.Groups;

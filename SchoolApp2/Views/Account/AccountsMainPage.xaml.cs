@@ -60,16 +60,6 @@ namespace SchoolApp2.Views.Account
             _mainWindow.Content = new LoginPage(_mainWindow, _repoPack);
         }
 
-        private void PrevPage_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void NextPage_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void AccDetails_Button_Click(object sender, RoutedEventArgs e)
         {
             var detWindow = new Upd_Del_Window();
