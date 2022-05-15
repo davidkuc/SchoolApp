@@ -61,12 +61,7 @@ namespace SchoolApp2.Views.Teacher
             _mainWindow.Content = new LoginPage(_mainWindow, _repoPack);
         }
 
-        private void SortOptions_Button_Click(object sender, RoutedEventArgs e)
-        {
-            var sortOptionsWindow = new SortOptionsWindow();
-            sortOptionsWindow.Content = new TeaSortOptions(sortOptionsWindow, this);
-            sortOptionsWindow.Show();
-        }
+
 
         private void PrevPage_Button_Click(object sender, RoutedEventArgs e)
         {

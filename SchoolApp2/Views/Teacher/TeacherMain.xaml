@@ -111,25 +111,12 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button Click="SortOptions_Button_Click" Height="30" Width="90"
-                            Grid.Column="0" Name="SortOptions_Button">
-                    Sort options
-                </Button>
-
                 <Grid Grid.Column="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Button Click="PrevPage_Button_Click" Height="30" Width="50"
-                            Grid.Column="0" Name="PrevPage_Button">
-                        Prev
-                    </Button>
-                    <Button Click="NextPage_Button_Click" Height="30" Width="50" 
-                            Grid.Column="1" Name="NextPage_Button">
-                        Next
-                    </Button>
                 </Grid>
             </Grid>
 

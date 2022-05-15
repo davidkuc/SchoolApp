@@ -26,7 +26,7 @@ namespace SchoolApp2.Views.Student
     /// <summary>
     /// Interaction logic for StudUpdGroups.xaml
     /// </summary>
-    public partial class StudUpdGroups : Page, INotifyPropertyChanged
+    public partial class StudUpdGroups : Page
     {
         private readonly Upd_Del_Window _updDelWindow;
         private readonly StudentUpdate _studUpd;
@@ -35,15 +35,12 @@ namespace SchoolApp2.Views.Student
         private GroupModel _selectedGroup;
         private ICollection<GroupModel> _groups;
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-
         public ICollection<GroupModel> Groups
         {
             get { return _groups; }
             set
             {
                 _groups = value;
-
             }
         }
 
@@ -65,13 +62,6 @@ namespace SchoolApp2.Views.Student
             _updDelWindow.Content = this;
             _updDelWindow.DataContext = this;
             _studUpd = studUpd;
-        }
-
-
-
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private void UpdGroups_Del_Button_Click(object sender, RoutedEventArgs e)

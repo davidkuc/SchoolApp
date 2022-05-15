@@ -95,12 +95,7 @@ namespace SchoolApp2.Views.Student
             updDelWindow.Show();
         }
 
-        private void StudSortOptions_Button_Click(object sender, RoutedEventArgs e)
-        {
-            var sortOptionsWindow = new SortOptionsWindow();
-            sortOptionsWindow.Content = new StudSortOptions(sortOptionsWindow, this);
-            sortOptionsWindow.Show();
-        }
+
 
         private void PrevPage_Button_Click(object sender, RoutedEventArgs e)
         {

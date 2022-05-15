@@ -60,13 +60,6 @@ namespace SchoolApp2.Views.Account
             _mainWindow.Content = new LoginPage(_mainWindow, _repoPack);
         }
 
-        private void SortOptions_Button_Click(object sender, RoutedEventArgs e)
-        {
-            var sortOptions = new SortOptionsWindow();
-            sortOptions.Content = new AccountSortOptions(sortOptions, this);
-            sortOptions.Show();
-        }
-
         private void PrevPage_Button_Click(object sender, RoutedEventArgs e)
         {
 
