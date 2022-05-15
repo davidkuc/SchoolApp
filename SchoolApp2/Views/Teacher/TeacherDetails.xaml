@@ -23,9 +23,9 @@
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
@@ -41,44 +41,22 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Name</TextBlock>
-                <TextBlock Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Name}"></TextBlock>
+                <TextBox Grid.Row="0" Grid.Column="1" 
+                           VerticalAlignment="Center" Text="{Binding SName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Surname</TextBlock>
-                <TextBlock Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Surname}"></TextBlock>
-                <TextBlock Grid.Row="2" Grid.Column="0"  FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center">Date of birth</TextBlock>
-                <TextBlock Grid.Row="2" Grid.Column="2" 
-                           VerticalAlignment="Center" Text="{Binding DateOfBirth}"></TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" 
+                           VerticalAlignment="Center" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </Grid>
 
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.2*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                </Grid.RowDefinitions>
 
-                <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
-                         FontWeight="Bold"  >Subjects</TextBlock>
-
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-
-
-                </Grid>
-
-                <ListView Name="SubjectList" Grid.Row="2"></ListView>
-
-            </Grid>
 
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.2*"></RowDefinition>
                     <RowDefinition Height="0.2*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -97,8 +75,22 @@
                           >Code</TextBlock>
                 </Grid>
 
-                <ListView Name="GroupList" Grid.Row="2"></ListView>
 
+                <ListView Name="TeaGroups" ItemsSource="{Binding Groups, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2"
+                          Grid.ColumnSpan="6" HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding ActivityForm}" />
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding SCode}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListView>
 
             </Grid>
 
@@ -124,7 +116,7 @@
 
                 <Button Grid.Column="0" Height="30" Width="70" 
                         Name="Update_Button" Background="Beige"
-                         Click="Update_Button_Click">Update</Button>
+                        Click="Update_Button_Click">Update</Button>
                 <Button Grid.Column="1" Height="30" Width="70" 
                         Name="Delete_Button" Background="OrangeRed"
                         Click="Delete_Button_Click">Delete</Button>

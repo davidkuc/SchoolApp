@@ -80,13 +80,14 @@
 
                 <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">ID</TextBlock>
                 <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
-                <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">Group count</TextBlock>
+                <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">Surname</TextBlock>
             </Grid>
 
             <Grid Grid.Row="2">
 
-                <ListBox Name="TeacherList" HorizontalContentAlignment="Stretch" 
-                         SelectionMode="Extended" SelectionChanged="TeacherList_SelectionChanged" Grid.ColumnSpan="6">
+                <ListBox Name="TeacherListBox" HorizontalContentAlignment="Stretch" 
+                         SelectionMode="Extended" SelectionChanged="TeacherList_SelectionChanged" Grid.ColumnSpan="6"
+                         ItemsSource="{Binding Teachers, UpdateSourceTrigger=PropertyChanged}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid Margin="5">
@@ -97,7 +98,7 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding ID}" />
                                 <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding Name}" />
-                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding GroupCount}" />
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding Surname}" />
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

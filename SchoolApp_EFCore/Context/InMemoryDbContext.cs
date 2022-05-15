@@ -103,10 +103,13 @@ namespace SchoolApp_EFCore.Context
 
         private static void GroupTeacher_ManyToMany(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<GroupTeacher>()
+          .HasKey(t => new { t.TeacherId, t.GroupId });
+
             modelBuilder.Entity<Teacher>()
-    .HasMany(p => p.Groups)
-    .WithMany(p => p.Teachers)
-    .UsingEntity<GroupTeacher>(
+            .HasMany(p => p.Groups)
+            .WithMany(p => p.Teachers)
+            .UsingEntity<GroupTeacher>(
         j => j
             .HasOne(x => x.Group)
             .WithMany(x => x.TeacherGroups)
@@ -121,12 +124,12 @@ namespace SchoolApp_EFCore.Context
         private static void GroupStudent_ManyToMany(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<GroupStudent>()
-     .HasKey(t => new { t.StudentId, t.GroupId });
+            .HasKey(t => new { t.StudentId, t.GroupId });
 
             modelBuilder.Entity<Student>()
-    .HasMany(p => p.Groups)
-    .WithMany(p => p.Students)
-    .UsingEntity<GroupStudent>(
+            .HasMany(p => p.Groups)
+            .WithMany(p => p.Students)
+            .UsingEntity<GroupStudent>(
         j => j
             .HasOne(x => x.Group)
             .WithMany(x => x.StudentGroups)
@@ -136,9 +139,6 @@ namespace SchoolApp_EFCore.Context
             .HasOne(x => x.Student)
             .WithMany(x => x.StudentGroups)
             .HasForeignKey(x => x.StudentId));
-
-            modelBuilder.Entity<GroupStudent>()
-.HasKey(t => new { t.StudentId, t.GroupId });
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using SchoolApp_EFCore.Repositories;
 using SchoolApp2.Views.Account;
+using EFTeacher = SchoolApp_EFCore.Models.Teacher;
 using SchoolApp2.Views.Shared;
 using SchoolApp2.Views.Shared.Pages;
 using SchoolApp2.Views.Student;
@@ -27,18 +28,32 @@ namespace SchoolApp2.Views.Teacher
     {
         private readonly MainWindow _mainWindow;
         private readonly RepoPack _repoPack;
+        private List<EFTeacher> _teachers;
+        private EFTeacher _selectedTeacher;
 
-        public TeacherMain(MainWindow window, RepoPack repoPack)
+        public TeacherMain(MainWindow mainWindow, RepoPack repoPack)
         {
             InitializeComponent();
-            _mainWindow = window;
+            _mainWindow = mainWindow;
+            _mainWindow.DataContext = this;
             _repoPack = repoPack;
+            _teachers = (List<EFTeacher>?)_repoPack.TeaRepo.GetAll();
+        }
 
+        public List<EFTeacher> Teachers
+        {
+            get { return _teachers; }
+            set
+            {
+                _teachers = value;
+            }
         }
 
         private void TeacherList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var listbox = (ListBox)sender;
+            var item = (EFTeacher)listbox.SelectedItem;
+            _selectedTeacher = item;
         }
 
         private void Home_Nav_Button_Click(object sender, RoutedEventArgs e)
@@ -65,7 +80,7 @@ namespace SchoolApp2.Views.Teacher
         private void TeacherDetails_Button_Click(object sender, RoutedEventArgs e)
         {
             var updDelWindow = new Upd_Del_Window();
-            updDelWindow.Content = new TeacherDetails(updDelWindow, this);
+            updDelWindow.Content = new TeacherDetails(updDelWindow, this, _selectedTeacher, _repoPack);
             updDelWindow.Show();
         }
     }

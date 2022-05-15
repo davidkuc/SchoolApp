@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using SchoolApp2.Models;
 using SchoolApp_EFCore.Repositories;
 using SchoolApp2.Helpers;
+using SchoolApp_EFCore.Models;
 
 namespace SchoolApp2.Views.Teacher
 {
@@ -76,16 +77,16 @@ namespace SchoolApp2.Views.Teacher
         {
             var selected = (GroupModel)DBGroups_ComboBox.SelectedItem;
 
-            var relationExists = _repoPack.GruStudRepo.GetByKeys(_tea.ID, selected.ID) != null ? true : false;
+            var relationExists = _repoPack.GruTeaRepo.GetByKeys(_tea.ID, selected.ID) != null ? true : false;
             if (relationExists)
             {
                 MessageBox.Show("This teacher is already assigned to this group", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            _repoPack.GruStudRepo.Add(
+            _repoPack.GruTeaRepo.Add(
                 new GroupTeacher { GroupId = selected.ID, TeacherId = _tea.ID });
-            _repoPack.GruStudRepo.Save();
+            _repoPack.GruTeaRepo.Save();
             _groups.Add(selected);
 
             TeacherGroups.Items.Refresh();
@@ -93,11 +94,11 @@ namespace SchoolApp2.Views.Teacher
 
         private void DeleteGroup_Button_Click(object sender, RoutedEventArgs e)
         {
-            var groupStud = _repoPack.GruStudRepo.GetByKeys(_tea.ID, SelectedGroup.ID);
-            _repoPack.GruStudRepo.Remove(groupStud);
-            _repoPack.GruStudRepo.Save();
+            var groupTea = _repoPack.GruTeaRepo.GetByKeys(_tea.ID, SelectedGroup.ID);
+            _repoPack.GruTeaRepo.Remove(groupTea);
+            _repoPack.GruTeaRepo.Save();
             _groups.Remove(SelectedGroup);
-            _repoPack.StudRepo.Update(_tea);
+            _repoPack.TeaRepo.Update(_tea);
 
             TeacherGroups.Items.Refresh();
         }

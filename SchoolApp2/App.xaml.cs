@@ -34,7 +34,6 @@ namespace SchoolApp2
             services.AddSingleton<TeaRepository>();
             services.AddSingleton<StudRepository>();
             services.AddSingleton<GruRepository>();
-            services.AddSingleton<SubjRepository>();
             services.AddSingleton<GruStudRepository>();
             services.AddSingleton<GruTeaRepository>();
 

@@ -66,7 +66,7 @@ namespace SchoolApp2.Views.Student
 
         private void DeleteStud_Button_Click(object sender, RoutedEventArgs e)
         {  
-           var trup =  _studMain.Students.Remove(_stud);
+           var removedStud =  _studMain.Students.Remove(_stud);
             _studMain.StudentListBox.Items.Refresh();
             _repoPack.StudRepo.Remove(_stud);
             _repoPack.StudRepo.Save();        

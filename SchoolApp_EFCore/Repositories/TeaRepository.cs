@@ -13,5 +13,10 @@ namespace SchoolApp_EFCore.Repositories
         public TeaRepository(DbContext dbContext) : base(dbContext)
         {
         }
+
+        public override IEnumerable<Teacher> GetAll()
+        {
+            return _dbSet.Include(x => x.Groups).ToList();
+        }
     }
 }
