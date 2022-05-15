@@ -54,11 +54,6 @@ namespace SchoolApp2.Views.Student
             { return _selectedGroup; }
         }
 
-        public IEnumerable<string> ActivityForms => EnumHelper.GetActivityForms();
-
-        public IEnumerable<string> Codes => EnumHelper.GetCodes();
-
-
         public StudUpdGroups(Upd_Del_Window updDelWindow, StudentUpdate studUpd, EFStudent stud, RepoPack repoPack)
         {
             InitializeComponent();
@@ -139,9 +134,19 @@ namespace SchoolApp2.Views.Student
         {
             var selected = (GroupModel)DBGroups_ComboBox.SelectedItem;
 
+            var relationExists = _repoPack.GruStudRepo.GetByKeys(_stud.ID, selected.ID) != null ? true : false;
+            if (relationExists)
+            {
+                MessageBox.Show("This student is already assigned to this group", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             _repoPack.GruStudRepo.Add(
                 new GroupStudent { GroupId = selected.ID, StudentId = _stud.ID });
             _repoPack.GruStudRepo.Save();
+            _groups.Add(selected);
+
+            StudentGroups.Items.Refresh();
         }
     }
 }
