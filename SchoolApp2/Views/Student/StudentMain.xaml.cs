@@ -33,7 +33,14 @@ namespace SchoolApp2.Views.Student
         private List<EFStudent> _students;
         private EFStudent _selectedStud;
 
-        public List<EFStudent> Students => _students;
+        public List<EFStudent> Students
+        {
+            get { return _students; }
+            set { 
+                _students = value;
+                StudentListBox.Items.Refresh();
+            }
+        }
 
         public EFStudent SelectedStudent
         {
