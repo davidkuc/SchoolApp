@@ -38,7 +38,6 @@ namespace SchoolApp2.Views.Student
             get { return _students; }
             set { 
                 _students = value;
-                StudentListBox.Items.Refresh();
             }
         }
 

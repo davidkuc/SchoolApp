@@ -81,6 +81,9 @@ namespace SchoolApp2.Views.Student
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)
         {
+           var updatedStud = _studMain.Students.Find(x => x.ID == _stud.ID);
+            updatedStud = _stud;
+            _studMain.StudentListBox.Items.Refresh();
             _updDelWindow?.Close();
         }
     }
