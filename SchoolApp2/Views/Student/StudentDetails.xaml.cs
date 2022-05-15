@@ -16,6 +16,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SchoolApp_EFCore.Models;
 using SchoolApp_EFCore.Repositories;
+using SchoolApp2.Models;
+using SchoolApp2.Helpers;
 
 namespace SchoolApp2.Views.Student
 {
@@ -28,6 +30,7 @@ namespace SchoolApp2.Views.Student
         private readonly StudentMain _studMain;
         private readonly EFStudent _stud;
         private readonly RepoPack _repoPack;
+        private ICollection<GroupModel> _groups;
 
         public string SName => _stud.Name;
 
@@ -39,7 +42,14 @@ namespace SchoolApp2.Views.Student
 
         public string Course => _stud.CourseName;
 
-        public ICollection<Group> Groups => _stud.Groups;
+        public ICollection<GroupModel> Groups
+        {
+            get { return _groups; }
+            set
+            {
+                _groups = value;
+            }
+        }
 
         public StudentDetails(Upd_Del_Window updDelWindow, StudentMain studMain, EFStudent stud, RepoPack repoPack)
         {
@@ -47,6 +57,7 @@ namespace SchoolApp2.Views.Student
             _updDelWindow = updDelWindow;
             _studMain = studMain;
             _stud = stud;
+            _groups = DataProvider.GetGroupModels(_stud);
             _repoPack = repoPack;
             _updDelWindow.Content = this;
             _updDelWindow.DataContext = this;

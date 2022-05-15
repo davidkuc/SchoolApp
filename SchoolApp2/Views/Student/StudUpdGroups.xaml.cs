@@ -19,6 +19,7 @@ using SchoolApp_EFCore.Models;
 using System.ComponentModel;
 using SchoolApp2.Models;
 using SchoolApp2.Enums;
+using SchoolApp2.Helpers;
 
 namespace SchoolApp2.Views.Student
 {
@@ -42,12 +43,12 @@ namespace SchoolApp2.Views.Student
             set
             {
                 _groups = value;
-       
+
             }
         }
 
-        public ICollection<GroupModel> DBGroups => GetDBGroupModels();
- 
+        public ICollection<GroupModel> DBGroups => DataProvider.GetDBGroupModels(_repoPack);
+
         public GroupModel SelectedGroup
         {
             get
@@ -59,42 +60,14 @@ namespace SchoolApp2.Views.Student
             InitializeComponent();
             _updDelWindow = updDelWindow;
             _stud = stud;
-            _groups = GetGroupModels();
+            _groups = DataProvider.GetGroupModels(_stud);
             _repoPack = repoPack;
             _updDelWindow.Content = this;
             _updDelWindow.DataContext = this;
             _studUpd = studUpd;
         }
 
-        private List<GroupModel> GetDBGroupModels()
-        {
-            var groups = new List<GroupModel>();
-            foreach (var item in _repoPack.GruRepo.GetAll())
-            {
-                groups.Add(new GroupModel()
-                {
-                    SCode = item.SCode,
-                    ActivityForm = item.ActivityForm,
-                    ID = item.ID
-                });
-            }
-            return groups;
-        }
 
-        private List<GroupModel> GetGroupModels()
-        {
-            var groups = new List<GroupModel>();
-            foreach (var item in _stud.Groups)
-            {
-                groups.Add(new GroupModel()
-                {
-                    SCode = item.SCode,
-                    ActivityForm = item.ActivityForm,
-                    ID = item.ID
-                });
-            }
-            return groups;
-        }
 
         protected void OnPropertyChanged(string propertyName)
         {
@@ -115,7 +88,11 @@ namespace SchoolApp2.Views.Student
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
         {
             //
+            var stud = _stud;
+            _updDelWindow.DataContext = _studUpd;
+            _studUpd.Groups = this.Groups;
             _updDelWindow.Content = _studUpd;
+
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)

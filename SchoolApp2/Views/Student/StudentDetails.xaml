@@ -42,15 +42,15 @@
                 <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Name</TextBlock>
                 <TextBlock Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding SName}"></TextBlock>
+                           VerticalAlignment="Center" Text="{Binding SName, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Surname</TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Surname}"></TextBlock>
+                           VerticalAlignment="Center" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                 <TextBlock Grid.Row="2" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Date of birth</TextBlock>
                 <TextBlock Grid.Row="2" Grid.Column="2" 
-                           VerticalAlignment="Center" Text="{Binding DateOfBirth}"></TextBlock>
+                           VerticalAlignment="Center" Text="{Binding DateOfBirth, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
             </Grid>
 
             <Grid Grid.Column="1">
@@ -67,11 +67,11 @@
                 <TextBlock Grid.Row="0" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Year</TextBlock>
                 <TextBlock Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Year}"></TextBlock>
+                           VerticalAlignment="Center" Text="{Binding Year, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Course</TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Course}"></TextBlock>
+                           VerticalAlignment="Center" Text="{Binding Course, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
             </Grid>
 
             <Grid Grid.Column="2">

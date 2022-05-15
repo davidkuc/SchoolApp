@@ -41,16 +41,16 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Name</TextBlock>
-                <TextBlock Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Name}"></TextBlock>
+                <TextBox Grid.Row="0" Grid.Column="1" 
+                           VerticalAlignment="Center" Text="{Binding SName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Surname</TextBlock>
-                <TextBlock Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Surname}"></TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" 
+                           VerticalAlignment="Center" Text="{Binding Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="2" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Date of birth</TextBlock>
-                <TextBlock Grid.Row="2" Grid.Column="2" 
-                           VerticalAlignment="Center" Text="{Binding DateOfBirth}"></TextBlock>
+                <TextBox Grid.Row="2" Grid.Column="2" 
+                           VerticalAlignment="Center" Text="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </Grid>
 
             <Grid Grid.Column="1">
@@ -66,12 +66,12 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Year</TextBlock>
-                <TextBlock Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Year}"></TextBlock>
+                <TextBox Grid.Row="0" Grid.Column="1" 
+                           VerticalAlignment="Center" Text="{Binding Year, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Course</TextBlock>
-                <TextBlock Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Course}"></TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" 
+                           VerticalAlignment="Center" Text="{Binding Course,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             </Grid>
 
             <Grid Grid.Column="2">
@@ -99,7 +99,7 @@
                 </Grid>
 
 
-                <ListView Name="StudGroups" ItemsSource="{Binding Groups}" Grid.Row="2"
+                <ListView Name="StudGroups" ItemsSource="{Binding Groups, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2"
                           Grid.ColumnSpan="6" HorizontalContentAlignment="Stretch">
                     <ListBox.ItemTemplate>
                         <DataTemplate>

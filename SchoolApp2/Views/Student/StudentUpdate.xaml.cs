@@ -16,6 +16,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SchoolApp_EFCore.Repositories;
 using SchoolApp_EFCore.Models;
+using SchoolApp2.Models;
+using SchoolApp2.Helpers;
 
 namespace SchoolApp2.Views.Student
 {
@@ -34,14 +36,14 @@ namespace SchoolApp2.Views.Student
         private int _year;
         private string _dateOfBirth;
         private string _course;
-        private ICollection<Group> _groups;
+        private ICollection<GroupModel> _groups;
 
         public string SName
         {
-            get {  return _name;}
+            get { return _name; }
             set { _name = value; }
         }
-       
+
         public string Surname
         {
             get { return _surname; }
@@ -66,7 +68,7 @@ namespace SchoolApp2.Views.Student
             set { _course = value; }
         }
 
-        public ICollection<Group> Groups
+        public ICollection<GroupModel> Groups
         {
             get { return _groups; }
             set { _groups = value; }
@@ -86,17 +88,23 @@ namespace SchoolApp2.Views.Student
 
         private void FillFields()
         {
-            Name = _stud.Name;
+            SName = _stud.Name;
             Surname = _stud.Surname;
             DateOfBirth = _stud.DateOfBirth;
             Course = _stud.CourseName;
             Year = _stud.Year;
-            Groups = _stud.Groups;
+            Groups = DataProvider.GetGroupModels(_stud);
         }
 
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
         {
-            //
+
+            _stud.Name = SName;
+            _stud.Surname = Surname;
+            _stud.DateOfBirth = DateOfBirth;
+            _stud.CourseName = Course;
+            _stud.Year = Year;
+            _repoPack.StudRepo.Update(_stud);
             _updDelWindow.Content = _studDet;
         }
 
