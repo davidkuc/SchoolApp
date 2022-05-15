@@ -67,15 +67,17 @@
                 <TextBlock Grid.Row="0" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Username</TextBlock>
                 <TextBlock Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Username}"></TextBlock>
+                           VerticalAlignment="Center" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                 <CheckBox  Name="Username_Show_Checkbox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
-                           VerticalAlignment="Center" Margin="0 50 0 0" Checked="Username_Show_Checkbox_Checked" >Show</CheckBox>
+                           VerticalAlignment="Center" Margin="0 50 0 0" Checked="Username_Show_Checkbox_Checked"
+                           Unchecked="Username_Show_Checkbox_Unchecked">Show</CheckBox>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Password</TextBlock>
                 <TextBlock Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Password}"></TextBlock>
+                           VerticalAlignment="Center" Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}"></TextBlock>
                 <CheckBox Name="Password_Show_Checkbox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
-                           VerticalAlignment="Center" Margin="0 50 0 0" Checked="Password_Show_Checkbox_Checked">Show</CheckBox>
+                           VerticalAlignment="Center" Margin="0 50 0 0" Checked="Password_Show_Checkbox_Checked"
+                          Unchecked="Password_Show_Checkbox_Unchecked">Show</CheckBox>
             </Grid>
 
 

@@ -71,7 +71,6 @@ namespace SchoolApp2.Views.Student
             _repoPack.StudRepo.Remove(_stud);
             _repoPack.StudRepo.Save();        
             _updDelWindow.Close();
-
         }
 
         private void UpdateStud_Button_Click(object sender, RoutedEventArgs e)

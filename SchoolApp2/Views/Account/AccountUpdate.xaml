@@ -42,15 +42,15 @@
                 <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Owner name</TextBlock>
                 <TextBox Grid.Row="0" Grid.Column="1"  Width="150" 
-                           VerticalAlignment="Center" Text="{Binding Name}"></TextBox>
+                           VerticalAlignment="Center" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Owner surname</TextBlock>
                 <TextBox Grid.Row="1" Grid.Column="1"  Width="150" 
-                           VerticalAlignment="Center" Text="{Binding Surname}"></TextBox>
+                           VerticalAlignment="Center" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="2" Grid.Column="0"  FontWeight="Bold" Foreground="OrangeRed"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Admin privileges</TextBlock>
                 <ComboBox Grid.Row="2" Grid.Column="2" Width="150" 
-                           VerticalAlignment="Center" Text="{Binding HasAdminPrivileges}"></ComboBox>
+                           VerticalAlignment="Center" Text="{Binding HasAdminPrivileges, UpdateSourceTrigger=PropertyChanged}"></ComboBox>
             </Grid>
 
             <Grid Grid.Column="1">
@@ -67,11 +67,11 @@
                 <TextBlock Grid.Row="0" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Username</TextBlock>
                 <TextBox Grid.Row="0" Grid.Column="1"  Width="150" 
-                           VerticalAlignment="Center" Text="{Binding Username}"></TextBox>
+                           VerticalAlignment="Center" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Password</TextBlock>
                 <TextBox Grid.Row="1" Grid.Column="1"  Width="150" 
-                           VerticalAlignment="Center" Text="{Binding Password}"></TextBox>
+                           VerticalAlignment="Center" Text="{Binding Password, UpdateSourceTrigger=PropertyChanged}"></TextBox>
 
             </Grid>
 
