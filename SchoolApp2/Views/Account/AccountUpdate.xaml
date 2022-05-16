@@ -49,8 +49,8 @@
                            VerticalAlignment="Center" Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="2" Grid.Column="0"  FontWeight="Bold" Foreground="OrangeRed"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Admin privileges</TextBlock>
-                <ComboBox Grid.Row="2" Grid.Column="2" Width="150" 
-                           VerticalAlignment="Center" Text="{Binding HasAdminPrivileges, UpdateSourceTrigger=PropertyChanged}"></ComboBox>
+                <CheckBox Grid.Row="2" Grid.Column="2" Width="150" 
+                           VerticalAlignment="Center" IsChecked="{Binding HasAdminPrivileges, UpdateSourceTrigger=PropertyChanged}"></CheckBox>
             </Grid>
 
             <Grid Grid.Column="1">
