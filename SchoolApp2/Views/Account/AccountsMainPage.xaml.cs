@@ -1,5 +1,6 @@
 ﻿using SchoolApp_EFCore.Repositories;
 using SchoolApp2.Views.Shared;
+using EFAccount = SchoolApp_EFCore.Models.Account;
 using SchoolApp2.Views.Shared.Pages;
 using SchoolApp2.Views.Student;
 using SchoolApp2.Views.Teacher;
@@ -27,17 +28,42 @@ namespace SchoolApp2.Views.Account
     {
         private readonly MainWindow _mainWindow;
         private readonly RepoPack _repoPack;
+        private List<EFAccount> _accounts;
+        private EFAccount _selectedAcc;
 
         public AccountsMainPage(MainWindow mainWindow, RepoPack repoPack)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            _mainWindow.DataContext = this;
             _repoPack = repoPack;
+            _accounts = (List<EFAccount>?)_repoPack.AccRepo.GetAll();
+        }
+
+        public List<EFAccount> Accounts
+        {
+            get { return _accounts; }
+            set
+            {
+                _accounts = value;
+            }
+        }
+
+        public EFAccount SelectedAccount
+        {
+            get
+            { return _selectedAcc; }
+            set
+            {
+                _selectedAcc = value;
+            }
         }
 
         private void AccountList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var listbox = (ListBox)sender;
+            var item = (EFAccount)listbox.SelectedItem;
+            _selectedAcc = item;
         }
 
         private void Home_Nav_Button_Click(object sender, RoutedEventArgs e)
@@ -63,7 +89,7 @@ namespace SchoolApp2.Views.Account
         private void AccDetails_Button_Click(object sender, RoutedEventArgs e)
         {
             var detWindow = new Upd_Del_Window();
-            detWindow.Content = new AccountDetails(detWindow, this);
+            detWindow.Content = new AccountDetails(detWindow, this, SelectedAccount, _repoPack);
             detWindow.Show();
         }
     }

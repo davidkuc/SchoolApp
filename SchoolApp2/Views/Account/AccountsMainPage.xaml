@@ -85,8 +85,9 @@
 
             <Grid Grid.Row="2">
 
-                <ListBox Name="AccountList" HorizontalContentAlignment="Stretch" 
-                         SelectionMode="Extended" SelectionChanged="AccountList_SelectionChanged" Grid.ColumnSpan="6">
+                <ListBox Name="AccountsListBox" HorizontalContentAlignment="Stretch" 
+                         SelectionMode="Extended" SelectionChanged="AccountList_SelectionChanged" Grid.ColumnSpan="6"
+                         ItemsSource="{Binding Accounts, UpdateSourceTrigger=PropertyChanged}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid Margin="5">
@@ -96,8 +97,15 @@
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding ID}" />
-                                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding Owner}" />
-                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding HasAdminPriviliges}" />
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Center">
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Path="Name"/>
+                                            <Binding Path="Surname"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding HasAdminPrivileges}" />
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

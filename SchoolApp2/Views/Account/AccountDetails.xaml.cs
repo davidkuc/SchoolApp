@@ -39,6 +39,8 @@ namespace SchoolApp2.Views.Account
             _repoPack = repoPack;
             _updDelWindow.Content = this;
             _updDelWindow.DataContext = this;
+            Username_TextBlock.Visibility = Visibility.Hidden;
+            Password_TextBlock.Visibility = Visibility.Hidden;
             _updDelWindow.Show();
         }
 
@@ -48,37 +50,31 @@ namespace SchoolApp2.Views.Account
 
         public bool HasAdminPrivileges => _acc.HasAdminPrivileges;
 
-        public string Username
-        {
-            get { return _username; }
-            set { _username = value; }
-        }
+        public string Username => _acc.Username;
 
-        public string Password
-        {
-            get { return _password; }
-            set { _password = value; }
-        }
+        public string Password => _acc.Password;
+
 
         private void Password_Show_Checkbox_Checked(object sender, RoutedEventArgs e)
         {
-            Password = _acc.Password;
+           Password_TextBlock.Visibility = Visibility.Visible;
+           
         }
 
         private void Username_Show_Checkbox_Checked(object sender, RoutedEventArgs e)
         {
-            Username = _acc.Username;
+            Username_TextBlock.Visibility = Visibility.Visible;
         }
 
 
         private void Username_Show_Checkbox_Unchecked(object sender, RoutedEventArgs e)
         {
-            Username = string.Empty;
+           Username_TextBlock.Visibility = Visibility.Hidden;
         }
 
         private void Password_Show_Checkbox_Unchecked(object sender, RoutedEventArgs e)
         {
-            Password = string.Empty;
+            Password_TextBlock.Visibility = Visibility.Hidden;
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)
@@ -91,13 +87,13 @@ namespace SchoolApp2.Views.Account
 
         private void UpdateAcc_Button_Click(object sender, RoutedEventArgs e)
         {
-            _updDelWindow.Content = new AccountUpdate(_updDelWindow, this);
+            _updDelWindow.Content = new AccountUpdate(_updDelWindow, this, _acc, _repoPack);
         }
 
         private void DeleteAcc_Button_Click(object sender, RoutedEventArgs e)
         {
             var removedAcc = _accMain.Accounts.Remove(_acc);
-            _accMain.AccountListBox.Items.Refresh();
+            _accMain.AccountsListBox.Items.Refresh();
             _repoPack.AccRepo.Remove(_acc);
             _repoPack.AccRepo.Save();
             _updDelWindow.Close();

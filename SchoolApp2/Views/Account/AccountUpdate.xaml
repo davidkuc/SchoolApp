@@ -42,7 +42,7 @@
                 <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Owner name</TextBlock>
                 <TextBox Grid.Row="0" Grid.Column="1"  Width="150" 
-                           VerticalAlignment="Center" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                           VerticalAlignment="Center" Text="{Binding SName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
                 <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
                            VerticalAlignment="Center" HorizontalAlignment="Center">Owner surname</TextBlock>
                 <TextBox Grid.Row="1" Grid.Column="1"  Width="150" 
