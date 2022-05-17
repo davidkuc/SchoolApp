@@ -38,6 +38,10 @@ namespace SchoolApp2.Views.Teacher
             _mainWindow.DataContext = this;
             _repoPack = repoPack;
             _teachers = (List<EFTeacher>?)_repoPack.TeaRepo.GetAll();
+            if (!LoginPage.AccountHolder.HasAdminPrivileges)
+            {
+                Accounts_Nav_Button.Visibility = Visibility.Hidden;
+            }
         }
 
         public List<EFTeacher> Teachers

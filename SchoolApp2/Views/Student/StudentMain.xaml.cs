@@ -58,6 +58,10 @@ namespace SchoolApp2.Views.Student
             _mainWindow.DataContext = this;
             _repoPack = repoPack;
             _students = (List<EFStudent>?)_repoPack.StudRepo.GetAll();
+            if (!LoginPage.AccountHolder.HasAdminPrivileges)
+            {
+                Accounts_Nav_Button.Visibility = Visibility.Hidden;
+            }
 
         }
 

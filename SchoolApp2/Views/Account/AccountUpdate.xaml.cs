@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SchoolApp_EFCore.Repositories;
+using SchoolApp2.Views.Shared.Pages;
 
 namespace SchoolApp2.Views.Account
 {
@@ -43,6 +44,10 @@ namespace SchoolApp2.Views.Account
             FillFields();
             _repoPack = repoPack;
             _updDelWindow.Content = this;
+            if (_acc.ID == "1")
+            {
+                HasAdminPrivileges_CheckBox.Visibility = Visibility.Hidden;
+            }
             _updDelWindow.DataContext = this;
         }
 

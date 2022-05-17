@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using SchoolApp_EFCore.Repositories;
+using SchoolApp2.Views.Shared.Pages;
 
 namespace SchoolApp2.Views.Account
 {
@@ -27,8 +28,6 @@ namespace SchoolApp2.Views.Account
         private readonly AccountsMainPage _accMain;
         private readonly EFAccount _acc;
         private readonly RepoPack _repoPack;
-        private string _username;
-        private string _password;
 
         public AccountDetails(Upd_Del_Window updDelWindow, AccountsMainPage accMain, EFAccount acc, RepoPack repoPack)
         {
@@ -41,6 +40,10 @@ namespace SchoolApp2.Views.Account
             _updDelWindow.DataContext = this;
             Username_TextBlock.Visibility = Visibility.Hidden;
             Password_TextBlock.Visibility = Visibility.Hidden;
+            if (LoginPage.AccountHolder.ID == _acc.ID)
+            {
+                DeleteAcc_Button.Visibility = Visibility.Hidden;
+            }
             _updDelWindow.Show();
         }
 

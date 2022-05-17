@@ -32,6 +32,10 @@ namespace SchoolApp2.Views.Shared.Pages
             InitializeComponent();
             _mainWindow = mainWindow;
             _repoPack = repoPack;
+            if (!LoginPage.AccountHolder.HasAdminPrivileges)
+            {
+                Accounts_Nav_Button.Visibility = Visibility.Hidden;
+            }
         }
 
         private void Students_Nav_Button_Click(object sender, RoutedEventArgs e)
@@ -45,7 +49,7 @@ namespace SchoolApp2.Views.Shared.Pages
         }
 
         private void Accounts_Nav_Button_Click(object sender, RoutedEventArgs e)
-        {
+        {         
             _mainWindow.Content = new AccountsMainPage(_mainWindow, _repoPack);
         }
 

@@ -10,7 +10,9 @@ namespace SchoolApp2.Models
     {
         private readonly AccountModel _acc;
 
-        public int ID => _acc.ID;
+        public string ID => _acc.ID;
+
+        public bool HasAdminPrivileges => _acc.HasAdminPrivileges;
 
         public AccountHolder(AccountModel acc)
         {
