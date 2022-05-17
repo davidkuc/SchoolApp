@@ -55,7 +55,8 @@ namespace SchoolApp2.Views.Account
 
         private void AddAcc_Button_Click(object sender, RoutedEventArgs e)
         {
-           var newAcc = new EFAccount
+
+            var newAcc = new EFAccount
             {
                 Name = this.SName,
                 Surname = this.Surname,
@@ -63,6 +64,12 @@ namespace SchoolApp2.Views.Account
                 Password = this.Password,
                 HasAdminPrivileges = this.HasAdminPrivileges
             };
+
+            if (Name == null || Surname == null || Username == null || Password == null)
+            {
+                MessageBox.Show("Fields cannot be empty", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
             _repoPack.AccRepo.Add(newAcc);
             _repoPack.AccRepo.Save();
