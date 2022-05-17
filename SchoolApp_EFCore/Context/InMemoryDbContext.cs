@@ -40,7 +40,16 @@ namespace SchoolApp_EFCore.Context
                         Name = "Uczen",
                         Surname = "Pokorny",
                         HasAdminPrivileges = false
-                    });
+                    },
+                      new Account
+                      {
+                          ID = "3",
+                          Username = "admin2",
+                          Password = "admin2",
+                          Name = "drugi",
+                          Surname = "drugi",
+                          HasAdminPrivileges = true
+                      });
 
             GroupStudent_ManyToMany(modelBuilder);
 

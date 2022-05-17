@@ -74,8 +74,8 @@
 
                 <TextBlock Name="SchoolApp" Grid.Row="0" HorizontalAlignment="Center"
                            Margin="0 0 0 0" FontSize="35" FontWeight="UltraLight">SchoolApp</TextBlock>
-                <TextBlock Name="Greeting" Grid.Row="1" Text="{Binding GreetingMessage}" HorizontalAlignment="Center"
-                           Margin="0 0 0 0" FontSize="27">(Greeting here)</TextBlock>
+                <TextBlock Name="GreetingText" Grid.Row="1" HorizontalAlignment="Center"
+                           Margin="0 0 0 0" FontSize="27">Hello!</TextBlock>
             </Grid>
 
         </Grid>

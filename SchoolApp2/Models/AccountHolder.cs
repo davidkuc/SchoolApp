@@ -12,6 +12,8 @@ namespace SchoolApp2.Models
 
         public string ID => _acc.ID;
 
+        public string Owner => _acc.Name + " " + _acc.Surname;
+
         public bool HasAdminPrivileges => _acc.HasAdminPrivileges;
 
         public AccountHolder(AccountModel acc)

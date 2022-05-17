@@ -31,6 +31,7 @@ namespace SchoolApp2.Views.Shared.Pages
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            DataContext = this;
             _repoPack = repoPack;
             if (!LoginPage.AccountHolder.HasAdminPrivileges)
             {
