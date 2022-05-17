@@ -44,7 +44,7 @@ namespace SchoolApp2.Views.Account
             FillFields();
             _repoPack = repoPack;
             _updDelWindow.Content = this;
-            if (_acc.ID == "1")
+            if (_acc.ID == 1)
             {
                 HasAdminPrivileges_CheckBox.Visibility = Visibility.Hidden;
             }

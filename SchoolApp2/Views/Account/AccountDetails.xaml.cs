@@ -40,7 +40,7 @@ namespace SchoolApp2.Views.Account
             _updDelWindow.DataContext = this;
             Username_TextBlock.Visibility = Visibility.Hidden;
             Password_TextBlock.Visibility = Visibility.Hidden;
-            if (LoginPage.AccountHolder.ID == _acc.ID || _acc.ID == "1")
+            if (LoginPage.AccountHolder.ID == _acc.ID || _acc.ID == 1)
             {
                 DeleteAcc_Button.Visibility = Visibility.Hidden;
             }

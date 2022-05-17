@@ -92,5 +92,12 @@ namespace SchoolApp2.Views.Account
             detWindow.Content = new AccountDetails(detWindow, this, SelectedAccount, _repoPack);
             detWindow.Show();
         }
+
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var addWindow = new Upd_Del_Window();
+            addWindow.Content = new AccountAdd(addWindow, this, _repoPack);
+            addWindow.Show();
+        }
     }
 }

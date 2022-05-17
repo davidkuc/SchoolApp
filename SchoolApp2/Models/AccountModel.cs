@@ -8,7 +8,7 @@ namespace SchoolApp2.Models
 {
     public class AccountModel
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         public string Username { get; set; }
 

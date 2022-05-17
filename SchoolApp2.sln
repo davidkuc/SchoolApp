@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp2", "SchoolApp2\Sc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp_EFCore", "SchoolApp_EFCore\SchoolApp_EFCore.csproj", "{0DAB870C-0F51-488C-804D-6FC341CF8759}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp_Tests", "SchoolApp_Tests\SchoolApp_Tests.csproj", "{89912ECA-D436-4ECD-AEDD-59DB078E7271}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp_Tests", "SchoolApp_Tests\SchoolApp_Tests.csproj", "{E4888BF3-85DA-4627-B677-B5B56AB771E1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0DAB870C-0F51-488C-804D-6FC341CF8759} = {0DAB870C-0F51-488C-804D-6FC341CF8759}
 		{56308C52-4967-43A6-998C-CCCB0AECF268} = {56308C52-4967-43A6-998C-CCCB0AECF268}
@@ -27,10 +27,10 @@ Global
 		{0DAB870C-0F51-488C-804D-6FC341CF8759}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DAB870C-0F51-488C-804D-6FC341CF8759}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DAB870C-0F51-488C-804D-6FC341CF8759}.Release|Any CPU.Build.0 = Release|Any CPU
-		{89912ECA-D436-4ECD-AEDD-59DB078E7271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89912ECA-D436-4ECD-AEDD-59DB078E7271}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89912ECA-D436-4ECD-AEDD-59DB078E7271}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89912ECA-D436-4ECD-AEDD-59DB078E7271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

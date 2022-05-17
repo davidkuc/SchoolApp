@@ -8,7 +8,7 @@ namespace SchoolApp_EFCore.Models
 {
     public class Account 
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         public string Username { get; set; }
 

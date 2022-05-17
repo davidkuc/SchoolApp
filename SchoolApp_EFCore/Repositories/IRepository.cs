@@ -19,6 +19,6 @@ namespace SchoolApp_EFCore.Repositories
 
         IEnumerable<T> GetAll();
 
-        T GetById(int id);
+        T GetById(string id);
     }
 }

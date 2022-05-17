@@ -10,7 +10,7 @@ namespace SchoolApp2.Models
     {
         private readonly AccountModel _acc;
 
-        public string ID => _acc.ID;
+        public int ID => _acc.ID;
 
         public string Owner => _acc.Name + " " + _acc.Surname;
 
