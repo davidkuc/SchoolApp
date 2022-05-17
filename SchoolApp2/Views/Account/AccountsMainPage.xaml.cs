@@ -88,6 +88,12 @@ namespace SchoolApp2.Views.Account
 
         private void AccDetails_Button_Click(object sender, RoutedEventArgs e)
         {
+            if (SelectedAccount == null)
+            {
+                MessageBox.Show("Select an account", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             var detWindow = new Upd_Del_Window();
             detWindow.Content = new AccountDetails(detWindow, this, SelectedAccount, _repoPack);
             detWindow.Show();

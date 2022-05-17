@@ -44,6 +44,16 @@ namespace SchoolApp2.Views.Teacher
             }
         }
 
+        public EFTeacher SelectedTeacher
+        {
+            get
+            { return _selectedTeacher; }
+            set
+            {
+                _selectedTeacher = value;
+            }
+        }
+
         public List<EFTeacher> Teachers
         {
             get { return _teachers; }
@@ -83,6 +93,11 @@ namespace SchoolApp2.Views.Teacher
 
         private void TeacherDetails_Button_Click(object sender, RoutedEventArgs e)
         {
+            if (SelectedTeacher == null)
+            {
+                MessageBox.Show("Select a teacher", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             var updDelWindow = new Upd_Del_Window();
             updDelWindow.Content = new TeacherDetails(updDelWindow, this, _selectedTeacher, _repoPack);
             updDelWindow.Show();
