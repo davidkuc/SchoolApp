@@ -99,7 +99,7 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding ID}" />
                                 <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding Name}" />
-                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding CourseName}" />
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding Course}" />
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
