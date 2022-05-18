@@ -57,7 +57,7 @@ namespace SchoolApp_EFCore.Context
 
             GroupTeacher_ManyToMany(modelBuilder);
 
-            SeedData(modelBuilder);
+            //SeedData(modelBuilder);
 
         }
 
