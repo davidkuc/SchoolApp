@@ -14,9 +14,7 @@ namespace SchoolApp_EFCore.Models
 
         public string Surname { get; set; }
 
-        public string CourseName { get; set; }
-
-        public Course? Course { get; set; }
+        public string Course { get; set; }
 
         public string DateOfBirth { get; set; }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SchoolApp2.Models;
+using System;
+using EFStudent = SchoolApp_EFCore.Models.Student;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SchoolApp_EFCore.Repositories;
+using SchoolApp2.Views.Shared;
+using SchoolApp_EFCore.Models;
 
 namespace SchoolApp2.Views.Student
 {
@@ -20,9 +25,76 @@ namespace SchoolApp2.Views.Student
     /// </summary>
     public partial class StudentAdd : Page
     {
-        public StudentAdd()
+        private ICollection<Group> _groups;
+        private readonly StudentMain _studMain;
+        private Upd_Del_Window _updDelWindow;
+        private RepoPack _repoPack;
+
+        public StudentAdd(StudentMain studMain, Upd_Del_Window updDelWindow, RepoPack repoPack)
         {
             InitializeComponent();
+            _studMain = studMain;
+            _updDelWindow = updDelWindow;
+            _repoPack = repoPack;
+            _updDelWindow.Content = this;
+            _updDelWindow.DataContext = this;
+
         }
+
+        public string SName { get; set; }
+
+        public string Surname { get; set; }
+
+        public string DateOfBirth { get; set; }
+
+        public string Course { get; set; }
+
+        public int Year { get; set; }
+
+        public ICollection<Group> Groups
+        {
+            get { return _groups; }
+            set { _groups = value; }
+        }
+
+
+        private void AddGroups_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow.Content = new StudAddGroups(_updDelWindow, this, _repoPack);
+        }
+
+        private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var newStud = new EFStudent
+            {
+                Name = this.SName,
+                Surname = this.Surname,
+                DateOfBirth = this.DateOfBirth,
+                Course = this.Course,
+                Year = this.Year
+            };
+
+
+            if (Name == null || Surname == null || DateOfBirth == null || Course == null)
+            {
+                MessageBox.Show("Fields cannot be empty", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            _repoPack.StudRepo.Add(newStud);
+            _repoPack.StudRepo.Save();
+            _studMain.Students.Add(newStud);
+            _studMain.StudentListBox.Items.Refresh();
+            _updDelWindow?.Close();
+        }
+
+        private void GoBack_Button_Click(object sender, RoutedEventArgs e)
+        {
+            _updDelWindow?.Close();
+        }
+
     }
+
+
 }
+

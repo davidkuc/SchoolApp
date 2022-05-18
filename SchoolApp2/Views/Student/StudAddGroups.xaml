@@ -1,4 +1,4 @@
-﻿<Page x:Class="SchoolApp2.Views.Student.StudentAdd"
+﻿<Page x:Class="SchoolApp2.Views.Student.StudAddGroups"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,18 +6,18 @@
       xmlns:local="clr-namespace:SchoolApp2.Views.Student"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="StudentAdd">
+      Title="StudAddGroups">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="2.7*"></RowDefinition>
-            <RowDefinition Height="0.7*"></RowDefinition>
+            <RowDefinition Height="0.6*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" Background="Beige" BorderThickness="3" BorderBrush="DarkGray">
             <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
-                   FontSize="30">Add Student</TextBlock>
+                   FontSize="30">Update Groups</TextBlock>
         </Border>
 
 
@@ -25,33 +25,9 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="1.3*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center">Name</TextBlock>
-                <TextBox Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding SName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-                <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center">Surname</TextBlock>
-                <TextBox Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-                <TextBlock Grid.Row="2" Grid.Column="0"  FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center">Date of birth</TextBlock>
-                <TextBox Grid.Row="2" Grid.Column="2" 
-                           VerticalAlignment="Center" Text="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-            </Grid>
 
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -60,26 +36,37 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="1.7*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0"  FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center">Year</TextBlock>
-                <TextBox Grid.Row="0" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Year, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
-                <TextBlock Grid.Row="1" Grid.Column="0"  FontWeight="Bold"
-                           VerticalAlignment="Center" HorizontalAlignment="Center">Course</TextBlock>
-                <TextBox Grid.Row="1" Grid.Column="1" 
-                           VerticalAlignment="Center" Text="{Binding Course,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0" HorizontalAlignment="Center"
+                               VerticalAlignment="Bottom">Group</TextBlock>
+                    <ComboBox Name="DBGroups_ComboBox" ItemsSource="{Binding DBGroups}" 
+                              Grid.Column="0" Grid.Row="1" Height="30" Width="110"></ComboBox>
+
+
+                </Grid>
+                <Button Name="AddGroups_Add_Button" Click="AddGroups_Add_Button_Click"
+                        Grid.Row="1" Height="30" Width="110">Add</Button>
+
             </Grid>
 
-            <Grid Grid.Column="2">
+            <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.2*"></RowDefinition>
                     <RowDefinition Height="0.2*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.3*"></RowDefinition>
+
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -94,16 +81,18 @@
                     <TextBlock Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"
                          >Activity form</TextBlock>
 
-                    <TextBlock Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,5"
+                    <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0"
                           >Code</TextBlock>
                 </Grid>
 
-
-                <ListView Name="StudGroups" ItemsSource="{Binding Groups, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2"
-                          Grid.ColumnSpan="6" HorizontalContentAlignment="Stretch">
+                <ListBox Grid.Row="2" Name="StudentGroups" HorizontalContentAlignment="Stretch" 
+                         SelectionMode="Extended" 
+                         SelectionChanged="StudentGroups_SelectionChanged"
+                         Grid.ColumnSpan="6" 
+                         ItemsSource="{Binding Groups, UpdateSourceTrigger=PropertyChanged}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <Grid Margin="0">
+                            <Grid Margin="5">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -113,9 +102,13 @@
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
-                </ListView>
+                </ListBox>
 
-                <Button Click="AddGroups_Button_Click" Grid.Row="3" Width="70" Name="AddGroups_Button">Add groups</Button>
+                <Button Name="AddGroups_Del_Button" Grid.Row="3" 
+                        Height="30" Width="110" Background="OrangeRed"
+                        Click="AddGroups_Del_Button_Click">Delete</Button>
+
+
             </Grid>
 
         </Grid>
@@ -139,8 +132,8 @@
                 </Grid.ColumnDefinitions>
 
                 <Button Grid.Column="1" Height="30" Width="70" 
-                        Name="ConfirmUpd_Button" Background="Beige"
-                        Click="ConfirmUpd_Button_Click">Confirm</Button>
+                        Name="Confirm_Button" Background="Beige"
+                        Click="Confirm_Button_Click">Confirm</Button>
 
             </Grid>
 
