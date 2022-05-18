@@ -29,7 +29,7 @@ namespace SchoolApp_EFCore.Repositories
             return _dbSet.ToList();
         }
 
-        public virtual T? GetById(string id)
+        public virtual T? GetById(int id)
         {
             return _dbSet.Find(id);
         }

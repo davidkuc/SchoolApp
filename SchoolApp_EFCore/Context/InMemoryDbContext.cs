@@ -65,30 +65,30 @@ namespace SchoolApp_EFCore.Context
         {
             var teachers = new List<Teacher>()
             {
-             new Teacher { ID = "1", Name = "Tea1", Surname = "Sur1"},
-              new Teacher { ID = "2", Name = "Tea2", Surname = "Sur2"},
-               new Teacher { ID = "3", Name = "Tea3", Surname = "Sur3"},
+             new Teacher { ID = 1, Name = "Tea1", Surname = "Sur1"},
+              new Teacher { ID = 2, Name = "Tea2", Surname = "Sur2"},
+               new Teacher { ID =3, Name = "Tea3", Surname = "Sur3"},
 
             };
 
             var students = new List<Student>()
             {
-             new Student { ID = "1", Name = "Stud1", Surname ="Sur1", CourseName="ddd", DateOfBirth="55/55/5555", Year = 1       },
-             new Student { ID = "2", Name = "Stud2", Surname = "Sur2", CourseName = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
-             new Student { ID = "3", Name = "Stud3", Surname = "Sur3", CourseName = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
-             new Student { ID = "4", Name = "Stud4", Surname = "Sur4", CourseName = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
-             new Student { ID = "5", Name = "Stud5", Surname ="Sur5", CourseName="ddd", DateOfBirth="55/55/5555", Year = 1      }    ,
-             new Student { ID = "6", Name = "Stud6", Surname = "Sur6", CourseName = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
-             new Student { ID = "7", Name = "Stud7", Surname = "Sur7", CourseName = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
-             new Student { ID = "8", Name = "Stud8", Surname = "Sur8", CourseName = "ddd", DateOfBirth = "55/55/5555", Year = 1 }
+             new Student { ID = 1, Name = "Stud1", Surname ="Sur1", Course="ddd", DateOfBirth="55/55/5555", Year = 1       },
+             new Student { ID = 2, Name = "Stud2", Surname = "Sur2",Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
+             new Student { ID = 3, Name = "Stud3", Surname = "Sur3",Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
+             new Student { ID = 4, Name = "Stud4", Surname = "Sur4",Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
+             new Student { ID = 5, Name = "Stud5", Surname ="Sur5", Course="ddd", DateOfBirth="55/55/5555", Year = 1      }    ,
+             new Student { ID = 6, Name = "Stud6", Surname = "Sur6",Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
+             new Student { ID = 7, Name = "Stud7", Surname = "Sur7",Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 },
+             new Student { ID = 8, Name = "Stud8", Surname = "Sur8",Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 }
             };
 
             var groups = new List<Group>()
             {
-                new Group { ID = "1", SCode = "MM",  ActivityForm = "EX"  },
-                new Group { ID = "2", SCode = "ALG",  ActivityForm = "EX"  },
-                new Group { ID = "3", SCode = "ENG", ActivityForm = "EX"  },
-                new Group { ID = "4", SCode = "STAT", ActivityForm = "EX"  }
+                new Group { ID = 1, SCode = "MM",  ActivityForm = "EX"  },
+                new Group { ID = 2, SCode = "ALG",  ActivityForm = "EX"  },
+                new Group { ID = 3, SCode = "ENG", ActivityForm = "EX"  },
+                new Group { ID = 4, SCode = "STAT", ActivityForm = "EX"  }
             };
 
             modelBuilder.Entity<Student>()
@@ -102,22 +102,22 @@ namespace SchoolApp_EFCore.Context
 
             modelBuilder.Entity<GroupStudent>()
                        .HasData(
-                new GroupStudent { StudentId = "1", GroupId = "1" },
-                    new GroupStudent { StudentId = "1", GroupId = "2" },
-                        new GroupStudent { StudentId = "1", GroupId = "3" },
-                            new GroupStudent { StudentId = "1", GroupId = "4" }
+                new GroupStudent { StudentId = 1, GroupId = 1 },
+                    new GroupStudent { StudentId = 1, GroupId = 1 },
+                        new GroupStudent { StudentId = 1, GroupId = 3 },
+                            new GroupStudent { StudentId = 1, GroupId = 4 }
                        );
 
             modelBuilder.Entity<GroupTeacher>()
                      .HasData(
-              new GroupTeacher { TeacherId = "1", GroupId = "1" },
-                      new GroupTeacher { TeacherId = "1", GroupId = "2" },
-                              new GroupTeacher { TeacherId = "2", GroupId = "1" },
-                                      new GroupTeacher { TeacherId = "2", GroupId = "2" },
-                                              new GroupTeacher { TeacherId = "2", GroupId = "3" },
-                                                new GroupTeacher { TeacherId = "2", GroupId = "4" },
-                                                  new GroupTeacher { TeacherId = "3", GroupId = "3" },
-                                                    new GroupTeacher { TeacherId = "3", GroupId = "4" }
+              new GroupTeacher { TeacherId = 1, GroupId = 1 },
+                      new GroupTeacher { TeacherId = 1, GroupId = 2 },
+                              new GroupTeacher { TeacherId = 2, GroupId = 1 },
+                                      new GroupTeacher { TeacherId = 2, GroupId = 2 },
+                                              new GroupTeacher { TeacherId = 2, GroupId = 3 },
+                                                new GroupTeacher { TeacherId = 2, GroupId = 4 },
+                                                  new GroupTeacher { TeacherId = 3, GroupId = 3 },
+                                                    new GroupTeacher { TeacherId = 3, GroupId = 4}
 
                      );
         }

@@ -14,7 +14,7 @@ namespace SchoolApp_EFCore.Repositories
         {
         }
 
-        public GroupStudent? GetByKeys(string studID, string groupID)
+        public GroupStudent? GetByKeys(int studID, int groupID)
         {
             return GetAll().SingleOrDefault(x => x.StudentId == studID && x.GroupId == groupID, null);
         }

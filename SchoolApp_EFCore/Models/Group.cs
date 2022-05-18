@@ -20,6 +20,6 @@ namespace SchoolApp_EFCore.Models
 
         public List<GroupTeacher> TeacherGroups { get; set; }
 
-        public string ID { get; set ; }
+        public int ID { get; set ; }
     }
 }

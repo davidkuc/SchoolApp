@@ -40,7 +40,7 @@ namespace SchoolApp2.Views.Student
 
         public int Year => _stud.Year;
 
-        public string Course => _stud.CourseName;
+        public string Course => _stud.Course;
 
         public ICollection<GroupModel> Groups
         {

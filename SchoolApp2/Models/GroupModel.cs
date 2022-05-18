@@ -13,7 +13,7 @@ namespace SchoolApp2.Models
 
         public string ActivityForm { get; set; }
 
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         public override string ToString()
         {
