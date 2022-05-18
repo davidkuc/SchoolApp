@@ -99,7 +99,7 @@
                 </Grid>
 
 
-                <ListView Name="StudGroups" ItemsSource="{Binding Groups, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2"
+                <ListView Name="StuGroups" ItemsSource="{Binding Groups, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2"
                           Grid.ColumnSpan="6" HorizontalContentAlignment="Stretch">
                     <ListBox.ItemTemplate>
                         <DataTemplate>

@@ -102,5 +102,12 @@ namespace SchoolApp2.Views.Teacher
             updDelWindow.Content = new TeacherDetails(updDelWindow, this, _selectedTeacher, _repoPack);
             updDelWindow.Show();
         }
+
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var addWindow = new Upd_Del_Window();
+            addWindow.Content = new TeacherAdd(this, addWindow, _repoPack);
+            addWindow.Show();
+        }
     }
 }
