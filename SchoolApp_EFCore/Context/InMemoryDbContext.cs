@@ -30,8 +30,6 @@ namespace SchoolApp_EFCore.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            //modelBuilder.Entity<Account>().HasKey(p => p.)
-
             modelBuilder.Entity<Account>().HasData(
                 new Account { ID = 1, Username = "admin", Password = "admin", Name = "Admin", Surname = "", HasAdminPrivileges = true },
                     new Account
