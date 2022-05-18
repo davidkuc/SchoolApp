@@ -33,6 +33,7 @@ namespace SchoolApp2.Views.Student
         public StudentAdd(StudentMain studMain, Upd_Del_Window updDelWindow, RepoPack repoPack)
         {
             InitializeComponent();
+            _groups = new List<Group>();
             _studMain = studMain;
             _updDelWindow = updDelWindow;
             _repoPack = repoPack;
@@ -60,7 +61,7 @@ namespace SchoolApp2.Views.Student
 
         private void AddGroups_Button_Click(object sender, RoutedEventArgs e)
         {
-            _updDelWindow.Content = new StudAddGroups(_updDelWindow, this, _repoPack);
+            _updDelWindow.Content = new StudAddGroups(_updDelWindow, this, _repoPack, _groups);
         }
 
         private void ConfirmUpd_Button_Click(object sender, RoutedEventArgs e)
@@ -81,10 +82,18 @@ namespace SchoolApp2.Views.Student
                 return;
             }
 
+
             _repoPack.StudRepo.Add(newStud);
             _repoPack.StudRepo.Save();
+            var addedStud = _repoPack.StudRepo.GetLast();
+            foreach (var item in Groups)
+            {
+                _repoPack.GruStudRepo.Add(new GroupStudent { GroupId = item.ID, StudentId = addedStud.ID });
+            }
+            _repoPack.GruStudRepo.Save();
             _studMain.Students.Add(newStud);
             _studMain.StudentListBox.Items.Refresh();
+            
             _updDelWindow?.Close();
         }
 

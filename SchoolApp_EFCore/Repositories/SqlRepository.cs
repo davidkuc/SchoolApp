@@ -34,6 +34,11 @@ namespace SchoolApp_EFCore.Repositories
             return _dbSet.Find(id);
         }
 
+        public T GetLast()
+        {
+            return _dbSet.Last();
+        }
+
         public virtual void Remove(T item)
         {
             _dbSet.Remove(item);

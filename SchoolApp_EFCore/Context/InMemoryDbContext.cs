@@ -103,7 +103,7 @@ namespace SchoolApp_EFCore.Context
             modelBuilder.Entity<GroupStudent>()
                        .HasData(
                 new GroupStudent { StudentId = 1, GroupId = 1 },
-                    new GroupStudent { StudentId = 1, GroupId = 1 },
+                    new GroupStudent { StudentId = 1, GroupId = 2 },
                         new GroupStudent { StudentId = 1, GroupId = 3 },
                             new GroupStudent { StudentId = 1, GroupId = 4 }
                        );

@@ -36,7 +36,8 @@ namespace SchoolApp2.Views.Student
         public List<EFStudent> Students
         {
             get { return _students; }
-            set { 
+            set
+            {
                 _students = value;
             }
         }
@@ -104,6 +105,12 @@ namespace SchoolApp2.Views.Student
             updDelWindow.Show();
         }
 
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
 
+            var addWindow = new Upd_Del_Window();
+            addWindow.Content = new StudentAdd(this, addWindow, _repoPack);
+            addWindow.Show();
+        }
     }
 }

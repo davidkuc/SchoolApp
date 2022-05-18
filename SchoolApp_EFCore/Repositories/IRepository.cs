@@ -9,6 +9,8 @@ namespace SchoolApp_EFCore.Repositories
 {
     public interface IRepository<T> where T : class
     {
+         T GetLast();
+
         void Add(T item);
 
         void Remove(T item);

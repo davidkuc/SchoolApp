@@ -25,14 +25,16 @@ namespace SchoolApp2.Views.Student
     /// </summary>
     public partial class StudAddGroups : Page
     {
-     
+
         private readonly Upd_Del_Window _updDelWindow;
         private readonly StudentAdd _studAdd;
         private readonly RepoPack _repoPack;
+        private ICollection<Group> _groups;
 
-        public StudAddGroups(Upd_Del_Window updDelWindow, StudentAdd studAdd, RepoPack repoPack)
+        public StudAddGroups(Upd_Del_Window updDelWindow, StudentAdd studAdd, RepoPack repoPack, ICollection<Group> groups)
         {
             InitializeComponent();
+            _groups = groups;
             _updDelWindow = updDelWindow;
             _studAdd = studAdd;
             _repoPack = repoPack;
@@ -42,25 +44,37 @@ namespace SchoolApp2.Views.Student
 
         public ICollection<Group> DBGroups => (ICollection<Group>)_repoPack.GruRepo.GetAll();
 
-        public ICollection<Group> Groups { get; set; }
+        public ICollection<Group> Groups
+        {
+            get
+            { return _groups; }
+            set
+            {
+                _groups = value;
+            }
+        }
 
         public Group SelectedGroup { get; set; }
-  
+
 
         private void AddGroups_Del_Button_Click(object sender, RoutedEventArgs e)
         {
             Groups.Remove(SelectedGroup);
+            StudentGroups.Items.Refresh();
         }
 
         private void GoBack_Button_Click(object sender, RoutedEventArgs e)
         {
+            _updDelWindow.DataContext = _studAdd;
             _updDelWindow.Content = _studAdd;
+
         }
 
         private void Confirm_Button_Click(object sender, RoutedEventArgs e)
         {
             _studAdd.Groups = this.Groups;
             StudentGroups.Items.Refresh();
+            _updDelWindow.DataContext = _studAdd;
             _updDelWindow.Content = _studAdd;
         }
 
@@ -68,14 +82,14 @@ namespace SchoolApp2.Views.Student
         {
             var selected = (Group)DBGroups_ComboBox.SelectedItem;
 
-            var relationExists = Groups.ElementAtOrDefault(selected.ID) != null ? true : false;
+            var relationExists = Groups.SingleOrDefault(p => p.ID == selected.ID, null) != null ? true : false;
             if (relationExists)
             {
                 MessageBox.Show("This student is already assigned to this group", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-        
+
             Groups.Add(selected);
 
 
@@ -84,7 +98,9 @@ namespace SchoolApp2.Views.Student
 
         private void StudentGroups_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var listbox = (ListBox)sender;
+            var item = (Group)listbox.SelectedItem;
+            SelectedGroup = item;
         }
     }
 }

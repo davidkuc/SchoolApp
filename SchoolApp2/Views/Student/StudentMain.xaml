@@ -113,7 +113,18 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-  
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button HorizontalContentAlignment="Center" Grid.Column="0"
+                        Name="Add_Button" Width="70" Height="30"
+                            Click="Add_Button_Click">Add</Button>
+                </Grid>
+
+
             </Grid>
 
         </Grid>

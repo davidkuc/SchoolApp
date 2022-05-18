@@ -31,6 +31,11 @@ namespace SchoolApp2.Helpers
         public static List<GroupModel> GetStudentGroupModels(EFStudent stud)
         {
             var groups = new List<GroupModel>();
+
+            if (stud.Groups == null)
+            {
+                return groups;
+            }
             foreach (var item in stud.Groups)
             {
                 groups.Add(new GroupModel()

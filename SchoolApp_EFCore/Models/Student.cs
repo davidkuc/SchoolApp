@@ -20,7 +20,7 @@ namespace SchoolApp_EFCore.Models
 
         public int Year { get; set; }
 
-        public ICollection<Group> Groups { get; set; }
+        public ICollection<Group>? Groups { get; set; }
 
         public List<GroupStudent> StudentGroups { get; set; }
 
