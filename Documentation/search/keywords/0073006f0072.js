@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("sor",["Class"],[["SortOptionsWindow",,[["SchoolApp2.Views.Shared",,,,0,"File:SchoolApp2/obj/Debug/net6.0-windows/Views/Shared/SortOptionsWindow.g.cs:SchoolApp2.Views.Shared.SortOptionsWindow","CSharpClass:SchoolApp2.Views.Shared.SortOptionsWindow"]]]]);

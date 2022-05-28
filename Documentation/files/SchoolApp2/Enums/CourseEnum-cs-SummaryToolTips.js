@@ -1,0 +1,1 @@
+﻿NDSummary.OnToolTipsLoaded("File:SchoolApp2/Enums/CourseEnum.cs",{2:"<div class=\"NDToolTip TEnumeration LCSharp\"><div id=\"NDPrototype2\" class=\"NDPrototype\"><div class=\"PSection PPlainSection\"><span class=\"SHKeyword\">public enum</span> CourseEnum</div></div></div>"});

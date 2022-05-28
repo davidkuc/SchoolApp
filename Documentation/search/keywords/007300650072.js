@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("ser",["Variable"],[["serviceProvider",,[["SchoolApp2.App",,,,0,"File:SchoolApp2/App.xaml.cs:SchoolApp2.App.serviceProvider","CSharpClass:SchoolApp2.App:serviceProvider"]]]]);

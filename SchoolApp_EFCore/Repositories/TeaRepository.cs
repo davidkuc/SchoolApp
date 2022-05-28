@@ -14,6 +14,10 @@ namespace SchoolApp_EFCore.Repositories
         {
         }
 
+        /// <summary>
+        /// Zwraca wszystkich nauczycieli razem z ich powiązanymi grupami
+        /// </summary>
+        /// <returns>IEnumerable encji typu Teacher</returns>
         public override IEnumerable<Teacher> GetAll()
         {
             return _dbSet.Include(x => x.Groups).ToList();

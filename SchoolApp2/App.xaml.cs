@@ -27,7 +27,7 @@ namespace SchoolApp2
 
         private void ConfigureServices(ServiceCollection services)
         {
-            services.AddDbContext<DbContext, InMemoryDbContext>();
+            services.AddDbContext<DbContext, SchoolAppDbContext>();
             services.AddSingleton<RepoPack>();
             services.AddSingleton<MainWindow>();
             services.AddSingleton<AccRepository>();

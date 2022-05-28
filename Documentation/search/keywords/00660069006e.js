@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("fin",["Function"],[["FindAccount",,[["SchoolApp_EFCore.Repositories.AccRepository",,,,0,"File:SchoolApp_EFCore/Repositories/AccRepository.cs:SchoolApp_EFCore.Repositories.AccRepository.FindAccount","CSharpClass:SchoolApp_EFCore.Repositories.AccRepository:FindAccount"]]]]);

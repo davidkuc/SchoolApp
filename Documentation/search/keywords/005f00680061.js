@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("_ha",["Variable"],[["_hasAdminPrivileges",,[["SchoolApp2.Views.Account.AccountUpdate",,,,0,"File:SchoolApp2/Views/Account/AccountUpdate.xaml.cs:SchoolApp2.Views.Account.AccountUpdate._hasAdminPrivileges","CSharpClass:SchoolApp2.Views.Account.AccountUpdate:_hasAdminPrivileges"]]]]);

@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("inm",["Class"],[["InMemoryDbContext",,[["SchoolApp_EFCore.Context",,,,0,"File:SchoolApp_EFCore/Context/InMemoryDbContext.cs:SchoolApp_EFCore.Context.InMemoryDbContext","CSharpClass:SchoolApp_EFCore.Context.InMemoryDbContext"]]]]);

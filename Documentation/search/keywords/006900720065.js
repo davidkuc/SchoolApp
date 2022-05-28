@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("ire",["Interface"],[["IRepository",,[["SchoolApp_EFCore.Repositories",,,,0,"File:SchoolApp_EFCore/Repositories/IRepository.cs:SchoolApp_EFCore.Repositories.IRepository","CSharpClass:SchoolApp_EFCore.Repositories.IRepository"]]]]);

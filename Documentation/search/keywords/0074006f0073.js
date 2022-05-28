@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("tos",["Function"],[["ToString",,[["SchoolApp2.Models.GroupModel",,,,0,"File:SchoolApp2/Models/GroupModel.cs:SchoolApp2.Models.GroupModel.ToString","CSharpClass:SchoolApp2.Models.GroupModel:ToString"]]]]);

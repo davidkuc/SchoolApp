@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp_EFCore.Repositories
 {
-    public class GruStudRepository : SqlRepository<GroupStudent>
+    public class GruStudRepository : BaseRepository<GroupStudent>
     {
         public GruStudRepository(DbContext dbContext) : base(dbContext)
         {

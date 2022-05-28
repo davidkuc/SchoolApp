@@ -26,7 +26,7 @@ namespace SchoolApp2
 
         public MainWindow(RepoPack repoPack)
         {
-            InitializeComponent();
+            InitializeComponent();                
             _repoPack = repoPack;
             this.Content = new LoginPage(this, _repoPack);
         }

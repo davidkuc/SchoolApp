@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp_EFCore.Models
 {
-    public class Group 
+    public class Group : IEntity
     {
         public string SCode { get; set; }
 

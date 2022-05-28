@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp_EFCore.Models
 {
-    public class Teacher 
+    public class Teacher : IEntity
     {
         public int ID { get; set; }
 

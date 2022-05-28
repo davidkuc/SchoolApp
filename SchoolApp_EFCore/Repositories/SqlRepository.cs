@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp_EFCore.Repositories
 {
-    public class SqlRepository<T> : IRepository<T> where T : class
+    public class SqlRepository<T> : IRepository<T> where T : class, IEntity
     {
         protected readonly DbSet<T> _dbSet;
         protected readonly DbContext _dbContext;
@@ -57,7 +57,7 @@ namespace SchoolApp_EFCore.Repositories
         /// <returns>Ostatnia encja w tabeli</returns>
         public T GetLast()
         {
-            return _dbSet.Last();
+            return _dbSet.OrderBy(p => p.ID).Last();
         }
 
         /// <summary>

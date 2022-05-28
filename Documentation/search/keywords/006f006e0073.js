@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("ons",["Function"],[["OnStartup",,[["SchoolApp2.App",,,,0,"File:SchoolApp2/App.xaml.cs:SchoolApp2.App.OnStartup","CSharpClass:SchoolApp2.App:OnStartup"]]]]);

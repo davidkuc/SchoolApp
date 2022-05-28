@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("gre",["Variable"],[["GreetingText",,[["SchoolApp2.Views.Shared.Pages.MainMenuPage",,,,0,"File:SchoolApp2/obj/Debug/net6.0-windows/Views/Shared/Pages/MainMenuPage.g.cs:SchoolApp2.Views.Shared.Pages.MainMenuPage.GreetingText","CSharpClass:SchoolApp2.Views.Shared.Pages.MainMenuPage:GreetingText"]]]]);

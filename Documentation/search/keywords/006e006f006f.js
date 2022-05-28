@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("noo",["Property"],[["NoOfStudents",,[["SchoolApp2.Models.CourseModel",,,,0,"File:SchoolApp2/Models/CourseModel.cs:SchoolApp2.Models.CourseModel.NoOfStudents","CSharpClass:SchoolApp2.Models.CourseModel:NoOfStudents"]]]]);
