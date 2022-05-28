@@ -32,6 +32,17 @@ namespace SchoolApp_EFCore.Context
                new Account { ID = 1, Username = "admin", Password = "admin",
                    Name = "Admin", Surname = "", HasAdminPrivileges = true });
 
+            var groups = new List<Group>()
+            {
+                new Group { ID = 1, SCode = "MM",  ActivityForm = "EX"  },
+                new Group { ID = 2, SCode = "ALG",  ActivityForm = "EX"  },
+                new Group { ID = 3, SCode = "ENG", ActivityForm = "EX"  },
+                new Group { ID = 4, SCode = "STAT", ActivityForm = "EX"  }
+            };
+
+            modelBuilder.Entity<Group>()
+              .HasData(groups[0], groups[1], groups[2], groups[3]);
+
             GroupStudent_ManyToMany(modelBuilder);
 
             GroupTeacher_ManyToMany(modelBuilder);

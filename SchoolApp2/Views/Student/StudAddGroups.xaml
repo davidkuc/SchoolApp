@@ -51,7 +51,15 @@
                     <TextBlock Grid.Column="0" HorizontalAlignment="Center"
                                VerticalAlignment="Bottom">Group</TextBlock>
                     <ComboBox Name="DBGroups_ComboBox" ItemsSource="{Binding DBGroups}" 
-                              Grid.Column="0" Grid.Row="1" Height="30" Width="110"></ComboBox>
+                              Grid.Column="0" Grid.Row="1" Height="30" Width="110">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding SCode}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
 
                 </Grid>
