@@ -24,7 +24,9 @@ namespace SchoolApp_Tests
 
                 Assert.IsNotNull(sqlRepo.GetById(1));
                 Assert.AreEqual(expStud.ID, sqlRepo.GetById(1).ID);
+                
                 dbCtx.Database.EnsureDeleted();
+                dbCtx.Dispose();
             }
 
         }
@@ -67,6 +69,7 @@ namespace SchoolApp_Tests
                 Assert.AreEqual(expStud1.ID, sqlRepo.GetById(1).ID);
                 Assert.AreEqual(expStud2.ID, sqlRepo.GetById(5).ID);
                 dbCtx.Database.EnsureDeleted();
+                dbCtx.Dispose();
             }
 
 
@@ -108,6 +111,7 @@ namespace SchoolApp_Tests
                     Assert.AreEqual(studList[i].Name, allStuds[i].Name);
                 }
                 dbCtx.Database.EnsureDeleted();
+                dbCtx.Dispose();
             }
 
         }
@@ -141,6 +145,7 @@ namespace SchoolApp_Tests
                 Assert.AreEqual(studList[4].ID, lastStud.ID);
                 Assert.AreEqual(studList[4].Name, lastStud.Name);
                 dbCtx.Database.EnsureDeleted();
+                dbCtx.Dispose();
             }
 
 
@@ -181,6 +186,7 @@ namespace SchoolApp_Tests
                 Assert.AreEqual(studList.Count, allStud.Count);
                 Assert.IsTrue(!allStud.Exists(p => p.ID == 6));
                 dbCtx.Database.EnsureDeleted();
+                dbCtx.Dispose();
             }
 
 
@@ -198,6 +204,7 @@ namespace SchoolApp_Tests
 
                 var expStud = new Student { ID = 1, Name = "newName", Surname = "Sur9", Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 };
                 sqlRepo.Add(new Student { Name = "Stud9", Surname = "Sur9", Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 });
+                sqlRepo.Save();
 
                 var updStud = sqlRepo.GetById(1);
                 updStud.Name = "newName";
@@ -207,6 +214,7 @@ namespace SchoolApp_Tests
 
                 Assert.AreEqual(expStud.Name, updatedStudent.Name);
                 dbCtx.Database.EnsureDeleted();
+                dbCtx.Dispose();
             }
 
         }
@@ -221,12 +229,24 @@ namespace SchoolApp_Tests
                 var sqlRepo = new SqlRepository<Student>(dbCtx);
                 sqlRepo.Add(new Student { Name = "Stud9", Surname = "Sur9", Course = "ddd", DateOfBirth = "55/55/5555", Year = 1 });
 
+                dbCtx.Groups.Add(new Group { ID = 1, ActivityForm = "s", SCode = "f" });
+                dbCtx.Groups.Add(new Group { ID = 2, ActivityForm = "s", SCode = "f" });
+                dbCtx.Groups.Add(new Group { ID = 3, ActivityForm = "s", SCode = "f" });
+
                 var gruStudRepo = new GruStudRepository(dbCtx);
                 gruStudRepo.Add(new GroupStudent { GroupId = 1, StudentId = 1 });
-                gruStudRepo.Add(new GroupStudent { GroupId = 1, StudentId = 1 });
-                gruStudRepo.Add(new GroupStudent { GroupId = 1, StudentId = 1 });
+                gruStudRepo.Add(new GroupStudent { GroupId = 2, StudentId = 1 });
+                gruStudRepo.Add(new GroupStudent { GroupId = 3, StudentId = 1 });
+
+                dbCtx.SaveChanges();
+
+                var stud = sqlRepo.GetById(1);
+
+                Assert.IsNotNull(stud.Groups);
+                Assert.AreEqual(3, stud.Groups.Count);
 
                 dbCtx.Database.EnsureDeleted();
+                dbCtx.Dispose();
             }
 
         }

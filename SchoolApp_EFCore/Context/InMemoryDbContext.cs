@@ -24,7 +24,8 @@ namespace SchoolApp_EFCore.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("TestDB");
+            var rnd = new Random();
+            optionsBuilder.UseInMemoryDatabase(rnd.Next().ToString());
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

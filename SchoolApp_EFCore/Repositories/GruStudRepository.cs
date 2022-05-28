@@ -14,6 +14,13 @@ namespace SchoolApp_EFCore.Repositories
         {
         }
 
+
+        /// <summary>
+        /// Wyszukuje encję o podanym kluczu (ID studenta oraz ID grupy)
+        /// </summary>
+        /// <param name="studID">ID studenta</param>
+        /// <param name="groupID">ID grupy</param>
+        /// <returns>Zwraca encję typu GroupStudent, jeżeli nie istnieje zwraca null </returns>
         public GroupStudent? GetByKeys(int studID, int groupID)
         {
             return GetAll().SingleOrDefault(x => x.StudentId == studID && x.GroupId == groupID, null);

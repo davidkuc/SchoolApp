@@ -15,6 +15,12 @@ namespace SchoolApp_EFCore.Repositories
 
         }
 
+        /// <summary>
+        /// Wyszukuje konto z podanym username i password
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns>Zwraca encję typu Account, jeżeli nie istnieje zwraca null</returns>
         public Account? FindAccount(string username, string password)
         {
             return GetAll().SingleOrDefault(x => x.Username == username && x.Password == password, null);
