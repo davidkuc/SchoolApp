@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp2", "SchoolApp2\Sc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp_EFCore", "SchoolApp_EFCore\SchoolApp_EFCore.csproj", "{0DAB870C-0F51-488C-804D-6FC341CF8759}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp_Tests", "SchoolApp_Tests\SchoolApp_Tests.csproj", "{E4888BF3-85DA-4627-B677-B5B56AB771E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp_Tests", "SchoolApp_Tests\SchoolApp_Tests.csproj", "{E4888BF3-85DA-4627-B677-B5B56AB771E1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0DAB870C-0F51-488C-804D-6FC341CF8759} = {0DAB870C-0F51-488C-804D-6FC341CF8759}
 		{56308C52-4967-43A6-998C-CCCB0AECF268} = {56308C52-4967-43A6-998C-CCCB0AECF268}
 	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SchoolApp_Setup", "SchoolApp_Setup\SchoolApp_Setup.vdproj", "{5A27B8AF-0688-4AD1-9140-F90012BC9852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,9 @@ Global
 		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Debug|Any CPU.ActiveCfg = Debug
+		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Release|Any CPU.ActiveCfg = Release
+		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
