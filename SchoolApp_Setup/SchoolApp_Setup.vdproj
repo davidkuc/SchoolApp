@@ -43,6 +43,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -59,6 +67,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.15.0"
+                    {
+                    "Name" = "8:SQL Server 2019 Express LocalDB"
+                    "ProductCode" = "8:Microsoft.SqlServer.SqlLocalDB.15.0"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -167,7 +196,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SchoolApp_Setup"
         "ProductCode" = "8:{A2231A60-7EC7-4F5D-B3DE-CF40186CFBEC}"
-        "PackageCode" = "8:{C4BEDFC4-E1B1-46F4-A8DD-7D77E33AE1D4}"
+        "PackageCode" = "8:{4F188E26-7B38-4A7A-BD69-E6E78318DE39}"
         "UpgradeCode" = "8:{ED233F66-B678-4076-828F-5483B0B07C20}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -744,7 +773,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_48746DD1A746483BAA031ED4EF0EC174"
             {
-            "SourcePath" = "8:..\\SchoolApp2\\obj\\Release\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\SchoolApp2\\obj\\x86\\Release\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BEC1CAE0DBAB482CA8B5F71E0BE353EF"

@@ -23,7 +23,7 @@ namespace SchoolApp_EFCore.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         { 
-            optionsBuilder.UseSqlServer("Data Source =.; Initial Catalog = SchoolApp; Trusted_Connection = True;");
+            optionsBuilder.UseSqlServer("Data Source =.; Initial Catalog =SchoolApp; Trusted_Connection =True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
