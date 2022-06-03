@@ -17,13 +17,11 @@ namespace SchoolApp_EFCore.Context
         public DbSet<Teacher> Teacher { get; set; }
 
         public SchoolAppDbContext()
-        {
-            this.Database.EnsureCreated();
-        }
+        {}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         { 
-            optionsBuilder.UseSqlServer("Data Source =.; Initial Catalog =SchoolApp; Trusted_Connection =True;");
+            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=SchoolApp;Trusted_Connection=True;trustServerCertificate=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

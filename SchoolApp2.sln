@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp_Tests", "SchoolAp
 		{56308C52-4967-43A6-998C-CCCB0AECF268} = {56308C52-4967-43A6-998C-CCCB0AECF268}
 	EndProjectSection
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SchoolApp_Setup", "SchoolApp_Setup\SchoolApp_Setup.vdproj", "{5A27B8AF-0688-4AD1-9140-F90012BC9852}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,17 +59,6 @@ Global
 		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Release|x64.Build.0 = Release|x64
 		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Release|x86.ActiveCfg = Release|x86
 		{E4888BF3-85DA-4627-B677-B5B56AB771E1}.Release|x86.Build.0 = Release|x86
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Debug|Any CPU.ActiveCfg = Debug
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Debug|x64.ActiveCfg = Debug
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Debug|x64.Build.0 = Debug
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Debug|x86.ActiveCfg = Debug
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Debug|x86.Build.0 = Debug
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Release|Any CPU.ActiveCfg = Release
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Release|Any CPU.Build.0 = Release
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Release|x64.ActiveCfg = Release
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Release|x64.Build.0 = Release
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Release|x86.ActiveCfg = Release
-		{5A27B8AF-0688-4AD1-9140-F90012BC9852}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,13 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64;x86</Platforms>
-    <ApplicationIcon>S_app-removebg-preview.ico</ApplicationIcon>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="S_app-removebg-preview.ico" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
